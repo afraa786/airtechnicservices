@@ -21,17 +21,16 @@ const Navigation = () => {
     { href: '/', label: 'Home' },
     { href: '/projects', label: 'Projects' },
     { href: '/about', label: 'About' },
-    { href: '/clients/hotels', label: 'Clients' },
     { href: '/contact', label: 'Contact' },
     { href: '/certifications', label: 'Certifications' },
   ];
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-navy text-white py-2 px-4 text-sm">
+      {/* Top Bar - Hidden on mobile to save space */}
+      <div className="hidden sm:block bg-navy text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
               <Phone size={14} />
               <span>+91 XXXX-XXXXXX</span>
@@ -59,16 +58,33 @@ const Navigation = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
-                <span className="text-gold font-bold text-lg">ATS</span>
-              </div>
-              <div>
-                <h1 className="font-display text-xl font-bold text-navy">
-                  Air Technic Services
-                </h1>
-                <p className="text-xs text-gray-600">The Best in the Business</p>
+            {/* Logo with improved responsive handling */}
+            <Link href="/" className="flex items-center min-w-0">
+              <div className="flex items-center space-x-2 flex-shrink-0">
+                {/* Logo image with fallback */}
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                  <img 
+                    src="/ats-logo.png" 
+                    alt="ATS Air Technic Services Logo"
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = '';
+                      target.parentElement!.innerHTML = `
+                        <div class="w-full h-full bg-navy rounded-lg flex items-center justify-center">
+                          <span class="text-gold font-bold text-lg">ATS</span>
+                        </div>
+                      `;
+                    }}
+                  />
+                </div>
+                <div className="hidden sm:block min-w-0">
+                  <h1 className="font-display text-xl font-bold text-navy truncate">
+                    Air Technic Services
+                  </h1>
+                  <p className="text-xs text-gray-600 truncate">The Best in the Business</p>
+                </div>
               </div>
             </Link>
 
@@ -95,10 +111,15 @@ const Navigation = () => {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden"
+              className="md:hidden p-2 -mr-2"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? (
+                <X size={24} className="text-navy" />
+              ) : (
+                <Menu size={24} className="text-navy" />
+              )}
             </button>
           </div>
         </div>
@@ -110,22 +131,38 @@ const Navigation = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-t"
+              transition={{ duration: 0.2 }}
+              className="md:hidden bg-white shadow-lg overflow-hidden"
             >
-              <div className="px-4 pt-2 pb-3 space-y-1">
+              <div className="px-4 pt-2 pb-4 space-y-1">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-3 py-2 text-gray-700 hover:text-navy hover:bg-gray-50 rounded-md"
+                    className="block px-3 py-3 text-gray-700 hover:text-navy hover:bg-gray-50 rounded-md font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </Link>
                 ))}
-                <button className="w-full text-left bg-navy text-white px-3 py-2 rounded-md font-medium">
+                <motion.button 
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full mt-2 bg-navy text-white px-3 py-3 rounded-md font-medium"
+                >
                   Get Quote
-                </button>
+                </motion.button>
+                
+                {/* Mobile contact info */}
+                <div className="pt-3 border-t mt-3">
+                  <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700">
+                    <Phone size={16} />
+                    <span>+91 XXXX-XXXXXX</span>
+                  </div>
+                  <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700">
+                    <Mail size={16} />
+                    <span>info@airtechnicservices.com</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}

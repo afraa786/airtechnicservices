@@ -52,24 +52,25 @@ export default function About() {
 
   return (
     <div className="min-h-screen pt-24">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy to-navy-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-gold">Expertise</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-              A decade of excellence in HVAC solutions with unwavering commitment to quality and innovation
-            </p>
-          </motion.div>
-        </div>
-      </section>
+     {/* Hero Section */}
+{/* Hero Section */}
+<section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center"
+    >
+      <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+        Our <span className="text-gold">Expertise</span>
+      </h1>
+      <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+        A decade of excellence in HVAC solutions with unwavering commitment to quality and innovation
+      </p>
+    </motion.div>
+  </div>
+</section>
 
       {/* Mission, Vision, Values - Hexagonal Grid */}
       <section className="py-20 bg-white">

@@ -163,50 +163,71 @@ export default function Projects() {
   return (
     <div className="min-h-screen pt-24 pb-16">
       {/* Header */}
-      <section className="bg-gradient-to-br from-navy to-navy-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+{/* Header - Modified to remove top white space */}
+<section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center"
+    >
+      <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+        Our <span className="text-gold">Top 10</span> Projects
+      </h1>
+      <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+        Showcasing excellence across diverse sectors with innovative HVAC solutions
+      </p>
+    </motion.div>
+  </div>
+</section>
+
+ 
+  {/* Filter Bar */}
+<section className="bg-white py-6 sticky top-20 z-40 border-b">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center gap-4 mb-4">
+      <Filter className="text-navy" size={20} />
+      <span className="font-semibold text-navy">Filter by Category:</span>
+    </div>
+    
+    {/* Mobile dropdown for small screens */}
+    <div className="md:hidden mb-4">
+      <select
+        onChange={(e) => handleCategoryChange(e.target.value)}
+        value={selectedCategory}
+        className="w-full p-3 rounded-lg border border-gray-300 focus:border-navy focus:ring-2 focus:ring-navy/50"
+      >
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    {/* Horizontal scroll for medium screens, full flex for large screens */}
+    <div className="hidden md:block">
+      <div className="flex flex-wrap gap-2 md:gap-3 overflow-x-auto pb-2 scrollbar-hide">
+        {categories.map((category) => (
+          <motion.button
+            key={category}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleCategoryChange(category)}
+            className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-medium transition-all text-sm md:text-base whitespace-nowrap ${
+              selectedCategory === category
+                ? 'bg-navy text-white shadow-lg'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
           >
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-gold">Top 10</span> Projects
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-              Showcasing excellence across diverse sectors with innovative HVAC solutions
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Filter Bar */}
-      <section className="bg-white py-8 sticky top-20 z-40 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Filter className="text-navy" size={20} />
-            <span className="font-semibold text-navy">Filter by Category:</span>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
-              <motion.button
-                key={category}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => handleCategoryChange(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === category
-                    ? 'bg-navy text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
+            {category}
+          </motion.button>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
       {/* Projects Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

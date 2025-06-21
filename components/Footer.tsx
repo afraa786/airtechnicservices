@@ -109,7 +109,7 @@ const Footer = () => {
               <span className="text-white font-semibold">Panasonic</span>
             </div>
             <div className="bg-white/10 px-6 py-3 rounded-lg">
-              <span className="text-white font-semibold">General</span>
+              <span className="text-white font-semibold">O'General</span>
             </div>
           </div>
         </div>

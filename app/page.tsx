@@ -172,7 +172,6 @@ export default function Home() {
         </div>
       </section>
 
-import Link from "next/link"; // Make sure this import is at the top
 
 {/* Featured Projects Preview */}
 <section className="py-20 bg-gray-50">
