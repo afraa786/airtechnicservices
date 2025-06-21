@@ -79,7 +79,8 @@ const Navigation = () => {
                     }}
                   />
                 </div>
-                <div className="hidden sm:block min-w-0">
+                <div className="block min-w-0 text-left">
+
                   <h1 className="font-display text-xl font-bold text-navy truncate">
                     Air Technic Services
                   </h1>
