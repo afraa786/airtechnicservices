@@ -183,16 +183,18 @@ export default function Projects() {
 </section>
 
  
-  {/* Filter Bar */}
-<section className="bg-white py-6 sticky top-20 z-40 border-b">
+{/* Filter Bar */}
+<section className="bg-white py-6 border-b">
+
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center gap-4 mb-4">
+    <div className="flex items-center gap-4 mb-3">
       <Filter className="text-navy" size={20} />
       <span className="font-semibold text-navy">Filter by Category:</span>
     </div>
-    
+
     {/* Mobile dropdown for small screens */}
-    <div className="md:hidden mb-4">
+    
+    <div className="md:hidden mb-2">
       <select
         onChange={(e) => handleCategoryChange(e.target.value)}
         value={selectedCategory}
@@ -205,6 +207,7 @@ export default function Projects() {
         ))}
       </select>
     </div>
+
 
     {/* Horizontal scroll for medium screens, full flex for large screens */}
     <div className="hidden md:block">
