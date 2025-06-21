@@ -58,34 +58,27 @@ const Navigation = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo with improved responsive handling */}
-            <Link href="/" className="flex items-center min-w-0">
-              <div className="flex items-center space-x-2 flex-shrink-0">
-                {/* Logo image with fallback */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                  <img 
-                    src="/ats-logo.png" 
-                    alt="ATS Air Technic Services Logo"
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null;
-                      target.src = '';
-                      target.parentElement!.innerHTML = `
-                        <div class="w-full h-full bg-navy rounded-lg flex items-center justify-center">
-                          <span class="text-gold font-bold text-lg">ATS</span>
-                        </div>
-                      `;
-                    }}
-                  />
-                </div>
-                <div className="block min-w-0 text-left">
-
-                  <h1 className="font-display text-xl font-bold text-navy truncate">
-                    Air Technic Services
-                  </h1>
-                  <p className="text-xs text-gray-600 truncate">The Best in the Business</p>
-                </div>
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                <img 
+                  src="/ats-logo.png" 
+                  alt="ATS Air Technic Services Logo"
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = '';
+                    target.parentElement!.innerHTML = `
+                      <div class="w-full h-full bg-gold rounded-lg flex items-center justify-center">
+                        <span class="text-navy font-bold text-lg">ATS</span>
+                      </div> `;
+                  }}
+                />
+              </div>
+              <div className="hidden sm:block">
+                <h3 className="font-display text-xl font-bold">Air Technic Services</h3>
+                <p className="text-gold text-xs">The Best in the Business</p>
               </div>
             </Link>
 
