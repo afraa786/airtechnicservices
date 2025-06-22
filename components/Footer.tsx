@@ -57,6 +57,7 @@ const Footer = () => {
                 { href: '/clients/hospitals', label: 'Hospital Clients' },
                 { href: '/contact', label: 'Contact Us' },
                 { href: '/certifications', label: 'Certifications' },
+                { href: '/careers', label: 'Careers' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

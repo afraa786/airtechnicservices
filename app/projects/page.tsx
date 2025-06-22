@@ -12,6 +12,9 @@ import BBluntCarousel from './bblunt';
 import PCarousel from './PCarousel';
 import SIESCarousel from './sies';
 import OasisCarousel from './oasis';
+import ShethCarousel from './sheth';
+import GoregoanCarousel from './goregoan';
+import CinepolisCarousel from './cinepolis';
 
 
 const projects = [
@@ -125,10 +128,10 @@ const projects = [
   },
   {
     id: 10,
-    title: "Medical Clinic",
+    title: "Yuva Dr. Sheth Clinic",
     category: "Clinics",
     location: "Mumbai",
-    year: "2022",
+    year: "2021",
     service: "Medical Grade HVAC",
     achievement: "Hospital Standards",
     description: "Medical-grade HVAC system meeting healthcare facility standards.",
@@ -183,7 +186,18 @@ const projects = [
     image: "/projects/oasis.jpeg", // ✅ Correct
     tags: ["VRF", "Energy Efficient", "Luxury"]
   },
-
+    {
+    id: 16,
+    title: "Cinepolis",
+    category: "Malls",
+    location: "Mumbai",
+    year: "2020",
+  service: "Cinepolis HVAC System Installation",
+  achievement: "Silent Airflow, Zero Disruptions",
+  description: "Engineered and installed a customized HVAC system for Cinepolis, ensuring silent air distribution with time-lapse monitored ducting work suited for cinema acoustics.",
+  image: "Cinepolis HVAC installation time-lapse",
+  tags: ["Cinepolis", "Cinema HVAC", "Acoustic Ducting", "Precision"]
+},
 ];
 
 const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
@@ -214,7 +228,7 @@ export default function Projects() {
             className="text-center"
           >
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-gold">Top 10</span> Projects
+              Our <span className="text-gold">Top 15</span> Projects
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
               Showcasing excellence across diverse sectors with innovative HVAC solutions
@@ -326,6 +340,18 @@ export default function Projects() {
                       <div className="w-full h-full">
                         <OasisCarousel />
                       </div>
+                          ) : project.id === 10 ? (
+                      <div className="w-full h-full">
+                        <ShethCarousel />
+                      </div>
+                             ) : project.id === 8 ? (
+                      <div className="w-full h-full">
+                        <GoregoanCarousel />
+                      </div>
+                               ) : project.id === 16 ? (
+                      <div className="w-full h-full">
+                        <CinepolisCarousel />
+                      </div>
                     ) : project.image ? (
                       <img
                         src={project.image}
@@ -342,8 +368,6 @@ export default function Projects() {
                       </div>
                     )}
                   </div>
-
-
 
                   {/* Project Info */}
                   <div className="p-6">

@@ -224,21 +224,21 @@ export default function Home() {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer"
                 >
-            <div className="h-48 relative overflow-hidden">
-  {project.title === "Palladium Hotel" ? (
-    <PallidiumCarousel />
-  ) : project.title === "IIT Powai" ? (
-    <IITPowaiCarousel />
-  ) : project.title === "Taiba Mosque" ? (
-    <TaibaMosqueCarousel />
-  ) : (
-    <img
-      src={project.image}
-      alt={project.title}
-      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-    />
-  )}
-</div>
+                  <div className="h-48 relative overflow-hidden">
+                    {project.title === "Palladium Hotel" ? (
+                      <PallidiumCarousel />
+                    ) : project.title === "IIT Powai" ? (
+                      <IITPowaiCarousel />
+                    ) : project.title === "Taiba Mosque" ? (
+                      <TaibaMosqueCarousel />
+                    ) : (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
+                  </div>
 
                   <div className="p-6">
                     <h3 className="font-display text-xl font-bold text-navy mb-2">

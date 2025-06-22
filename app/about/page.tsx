@@ -224,5 +224,37 @@ export default function About() {
         </div>
       </section>
     </div>
+    
   );
+  {/* Founder Section */}
+<div className="border-t border-navy-800 bg-navy-900">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+      {/* Founder Message */}
+      <div className="md:w-2/3 text-left">
+        <h3 className="font-display text-xl font-semibold mb-4 text-gold">
+          From the Founder’s Desk
+        </h3>
+        <p className="text-gray-300 text-lg mb-2">
+          We initiated our journey in 2014...
+        </p>
+        {/* All other <p>... </p> blocks */}
+      </div>
+
+      {/* Founder Picture & Info */}
+      <div className="md:w-1/3 text-center">
+        <img
+          src="/founder.jpeg"
+          alt="Founder"
+          className="rounded-lg shadow-lg mx-auto mb-4"
+        />
+        <h4 className="text-gold font-semibold text-lg">Ilyas Ahmed Shaikh</h4>
+        <p className="text-gray-400 text-sm">
+          Visionary leader with 10+ years in HVAC industry
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 }

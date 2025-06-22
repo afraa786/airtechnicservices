@@ -23,6 +23,7 @@ const Navigation = () => {
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
     { href: '/certifications', label: 'Certifications' },
+    { href: '/careers', label: 'Careers' },
   ];
 
   return (
