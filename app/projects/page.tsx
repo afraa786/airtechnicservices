@@ -6,7 +6,12 @@ import { Building, MapPin, Calendar, TrendingUp, Filter } from 'lucide-react';
 import ProjectCarousel from "./ProjectCarousel";
 import { yearsToDays } from 'date-fns';
 import CacCarousel from "./CacCarousel";
-
+import TaibaMosqueCarousel from "./TaibaMosqueCarousel";
+import IITPowaiCarousel from './IITPowaiCarousel';
+import BBluntCarousel from './bblunt';
+import PCarousel from './PCarousel';
+import SIESCarousel from './sies';
+import OasisCarousel from './oasis';
 
 
 const projects = [
@@ -19,7 +24,7 @@ const projects = [
     service: "VRF System Installation",
     achievement: "30% Energy Savings",
     description: "Complete VRF system installation for luxury hotel with advanced climate control.",
-    image: "public/palladium.jpeg",
+    image: "/projects/pallidium.jpeg", // ✅ Correct
     tags: ["VRF", "Energy Efficient", "Luxury"]
   },
   {
@@ -108,7 +113,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Beauty Salon Chain",
+    title: "B'blunt",
     category: "Salons",
     location: "Mumbai",
     year: "2023",
@@ -141,11 +146,47 @@ const projects = [
     description: "Complete HVAC solution for office spaces with VRF and chiller systems.",
     image: "CAC Air Conditioning Office",
     tags: ["VRF", "Chiller", "Energy Efficient"]
-  }
+  },
+  {
+    id: 12,
+    title: "Taiba Mosque",
+    category: "Holy Places",
+    location: "Mumbai",
+    year: "2022",
+    service: "AC Installation",
+    achievement: "Centralised Air Conditioning",
+    description: "Centralised air conditioning system for religious place with thermal imaging verification.",
+    image: "Thermal imaging of temple airflow",
+    tags: ["AC", "Religious", "Air Quality"]
+  },
+  {
+    id: 14,
+    title: "SIES College",
+    category: "Educational",
+    location: "Navi Mumbai",
+    year: "2020",
+    service: "Ducting, Kitchen Ventilation, and Chiller Installation",
+    achievement: "Ventilation System for Kitchen",
+    description: "Complete HVAC solution for educational institution with ducting and kitchen ventilation.",
+    image: "/projects/sies.jpeg", // ✅ Correct
+    tags: ["VRF", "Energy Efficient", "Luxury"]
+  },
+    {
+    id: 15,
+    title: "The Great Oasis",
+    category: "Commercial",
+    location: "Mumbai",
+    year: "2019",
+    service: "Comprehensive Air Conditioning Installation",
+    achievement: "From Design to Cool Air – Hassle-Free",
+    description: "Complete air conditioning installation for commercial space with energy-efficient systems.",
+    image: "/projects/oasis.jpeg", // ✅ Correct
+    tags: ["VRF", "Energy Efficient", "Luxury"]
+  },
 
 ];
 
-const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Salons", "Clinics", "Offices", "Flight Operations"];
+const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -163,74 +204,73 @@ export default function Projects() {
   return (
     <div className="min-h-screen pt-24 pb-16">
       {/* Header */}
-{/* Header - Modified to remove top white space */}
-<section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="text-center"
-    >
-      <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-        Our <span className="text-gold">Top 10</span> Projects
-      </h1>
-      <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-        Showcasing excellence across diverse sectors with innovative HVAC solutions
-      </p>
-    </motion.div>
-  </div>
-</section>
-
- 
-{/* Filter Bar */}
-<section className="bg-white py-6 border-b">
-
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center gap-4 mb-3">
-      <Filter className="text-navy" size={20} />
-      <span className="font-semibold text-navy">Filter by Category:</span>
-    </div>
-
-    {/* Mobile dropdown for small screens */}
-    
-    <div className="md:hidden mb-2">
-      <select
-        onChange={(e) => handleCategoryChange(e.target.value)}
-        value={selectedCategory}
-        className="w-full p-3 rounded-lg border border-gray-300 focus:border-navy focus:ring-2 focus:ring-navy/50"
-      >
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
-    </div>
-
-
-    {/* Horizontal scroll for medium screens, full flex for large screens */}
-    <div className="hidden md:block">
-      <div className="flex flex-wrap gap-2 md:gap-3 overflow-x-auto pb-2 scrollbar-hide">
-        {categories.map((category) => (
-          <motion.button
-            key={category}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => handleCategoryChange(category)}
-            className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-medium transition-all text-sm md:text-base whitespace-nowrap ${
-              selectedCategory === category
-                ? 'bg-navy text-white shadow-lg'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+      {/* Header - Modified to remove top white space */}
+      <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            {category}
-          </motion.button>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+              Our <span className="text-gold">Top 10</span> Projects
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+              Showcasing excellence across diverse sectors with innovative HVAC solutions
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
+      {/* Filter Bar */}
+      <section className="bg-white py-6 border-b">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-3">
+            <Filter className="text-navy" size={20} />
+            <span className="font-semibold text-navy">Filter by Category:</span>
+          </div>
+
+          {/* Mobile dropdown for small screens */}
+
+          <div className="md:hidden mb-2">
+            <select
+              onChange={(e) => handleCategoryChange(e.target.value)}
+              value={selectedCategory}
+              className="w-full p-3 rounded-lg border border-gray-300 focus:border-navy focus:ring-2 focus:ring-navy/50"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+
+          {/* Horizontal scroll for medium screens, full flex for large screens */}
+          <div className="hidden md:block">
+            <div className="flex flex-wrap gap-2 md:gap-3 overflow-x-auto pb-2 scrollbar-hide">
+              {categories.map((category) => (
+                <motion.button
+                  key={category}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => handleCategoryChange(category)}
+                  className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-medium transition-all text-sm md:text-base whitespace-nowrap ${selectedCategory === category
+                      ? 'bg-navy text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                >
+                  {category}
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Projects Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,26 +292,56 @@ export default function Projects() {
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer"
                 >
-               {/* Project Image Carousel or Placeholder */}
-<div className="h-56 relative overflow-hidden">
-  {project.id === 3 ? (
-    <div className="w-full h-full">
-      <ProjectCarousel />
-    </div>
-  ) : project.id === 11 ? (
-    <div className="w-full h-full">
-      <CacCarousel />
-    </div>
-  ) : (
-    <div className="h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-500 relative">
-      <div className="text-center z-10">
-        <Building size={40} className="mx-auto mb-2" />
-        <p className="text-sm px-4">{project.image}</p>
-      </div>
-      <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/20 transition-colors"></div>
-    </div>
-  )}
-</div>
+                  {/* Project Image Carousel or Placeholder */}
+                  <div className="h-56 relative overflow-hidden">
+                    {project.id === 3 ? (
+                      <div className="w-full h-full">
+                        <ProjectCarousel />
+                      </div>
+                    ) : project.id === 11 ? (
+                      <div className="w-full h-full">
+                        <CacCarousel />
+                      </div>
+                    ) : project.id === 12 ? (
+                      <div className="w-full h-full">
+                        <TaibaMosqueCarousel />
+                      </div>
+                         ) : project.id === 2 ? (
+                      <div className="w-full h-full">
+                        <IITPowaiCarousel />
+                      </div>
+                           ) : project.id === 9 ? (
+                      <div className="w-full h-full">
+                        <BBluntCarousel />
+                      </div>
+                           ) : project.id === 1 ? (
+                      <div className="w-full h-full">
+                        <PCarousel />
+                      </div>
+                           ) : project.id === 14 ? (
+                      <div className="w-full h-full">
+                        <SIESCarousel />
+                      </div>
+                          ) : project.id === 15 ? (
+                      <div className="w-full h-full">
+                        <OasisCarousel />
+                      </div>
+                    ) : project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-500 relative">
+                        <div className="text-center z-10">
+                          <Building size={40} className="mx-auto mb-2" />
+                          <p className="text-sm px-4">{project.image}</p>
+                        </div>
+                        <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/20 transition-colors"></div>
+                      </div>
+                    )}
+                  </div>
 
 
 
