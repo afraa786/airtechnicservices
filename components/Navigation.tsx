@@ -23,6 +23,7 @@ const Navigation = () => {
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
     { href: '/certifications', label: 'Certifications' },
+    { href: '/careers', label: 'Careers' },
   ];
 
   return (
@@ -50,19 +51,18 @@ const Navigation = () => {
       <motion.nav
         initial={{ y: 0 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-lg'
             : 'bg-white'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                <img 
-                  src="/ats-logo.png" 
+                <img
+                  src="/ats-logo.png"
                   alt="ATS Air Technic Services Logo"
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -76,7 +76,7 @@ const Navigation = () => {
                   }}
                 />
               </div>
-         <div className="block text-center sm:text-left min-w-0">
+              <div className="block text-center sm:text-left min-w-0">
 
                 <h3 className="font-display text-xl font-bold">Air Technic Services</h3>
                 <p className="text-gold text-xs">The Best in the Business</p>
@@ -95,13 +95,15 @@ const Navigation = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-200 group-hover:w-full"></span>
                 </Link>
               ))}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-navy text-white px-6 py-2 rounded-lg font-medium hover:bg-navy/90 transition-colors"
-              >
-                Get Quote
-              </motion.button>
+              <Link href="http://localhost:3000/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-navy text-white px-6 py-2 rounded-lg font-medium hover:bg-navy/90 transition-colors"
+                >
+                  Get Quote
+                </motion.button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -140,13 +142,13 @@ const Navigation = () => {
                     {item.label}
                   </Link>
                 ))}
-                <motion.button 
+                <motion.button
                   whileTap={{ scale: 0.98 }}
                   className="w-full mt-2 bg-navy text-white px-3 py-3 rounded-md font-medium"
                 >
                   Get Quote
                 </motion.button>
-                
+
                 {/* Mobile contact info */}
                 <div className="pt-3 border-t mt-3">
                   <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700">

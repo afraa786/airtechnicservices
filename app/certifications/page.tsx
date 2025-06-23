@@ -64,21 +64,18 @@ const companyStats = [
 ];
 
 const additionalCertifications = [
-{
-  title: "ISO 9001:2015 - Quality Management System",
-  description: "Certified for establishing and maintaining a robust Quality Management System in the field of HVAC and Electrical Contracting, including supply, installation, and AMC of HVAC and electrical equipment.",
-  issuer: "Magnitude Management Services Pvt. Ltd.",
-  certificationBody: "ISO (International Organization for Standardization)",
-  certificateNumber: "22FQIC90",
-  issuedDate: "2022-11-02",
-  expiryDate: "2025-11-01"
-},
-{
-  title: "Client Recommendation Letter",
-  description: "Endorsed by Goregaon Sports Club for being a prominent and reliable HVAC vendor. The certificate acknowledges that services provided by Air Technic Services were excellent and satisfactory, and the client had no hesitation in recommending them for future projects.",
-  issuer: "Goregaon Sports Club, Mumbai",
-  year: "2016"
-},
+  {
+    title: "ISO 9001:2015",
+    description: "Quality Management System Certification",
+    issuer: "International Organization for Standardization",
+    year: "2022"
+  },
+  {
+    title: "HVAC Contractor License",
+    description: "Mumbai Municipal Corporation Licensed Contractor",
+    issuer: "BMC",
+    year: "2014"
+  },
   {
     title: "Electrical Contractor License",
     description: "Licensed Electrical Contractor for HVAC Systems",
@@ -86,12 +83,11 @@ const additionalCertifications = [
     year: "2015"
   },
   {
-  title: "Work Completion Certificate",
-  description: "Certification of successful completion of system installation and adherence to all safety and performance standards.",
-  issuer: "Indian Institute of Technology (Bombay)",
-  year: "2023"
-}
-
+    title: "Safety Compliance Certificate",
+    description: "Workplace Safety and Installation Standards",
+    issuer: "Industrial Safety Department",
+    year: "2023"
+  }
 ];
 
 export default function Certifications() {
@@ -333,13 +329,6 @@ export default function Certifications() {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Work with Mumbai's most certified HVAC professionals for guaranteed quality and peace of mind
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
-            >
-              Get Certified Installation Quote
-            </motion.button>
           </motion.div>
         </div>
       </section>
