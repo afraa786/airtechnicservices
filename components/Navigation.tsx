@@ -34,15 +34,15 @@ const Navigation = () => {
           <div className="flex items-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
               <Phone size={14} />
-              <span>+91 XXXX-XXXXXX</span>
+              <span>+91 9136283995</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail size={14} />
-              <span>info@airtechnicservices.com</span>
+              <span>airtechnicservice@gmail.com</span>
             </div>
           </div>
           <div className="hidden md:block">
-            <span>Mumbai & Navi Mumbai | Since 2014</span>
+            <span>Pan India Services | Since 2014</span>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ const Navigation = () => {
                 </motion.button>
               </Link>
             </div>
-
+x
             {/* Mobile menu button */}
             <button
               className="md:hidden p-2 -mr-2"
@@ -153,11 +153,11 @@ const Navigation = () => {
                 <div className="pt-3 border-t mt-3">
                   <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700">
                     <Phone size={16} />
-                    <span>+91 XXXX-XXXXXX</span>
+                    <span>+91 9136283995</span>
                   </div>
                   <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700">
                     <Mail size={16} />
-                    <span>info@airtechnicservices.com</span>
+                    <span>airtechnicservice@gmail.com</span>
                   </div>
                 </div>
               </div>

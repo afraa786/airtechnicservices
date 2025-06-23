@@ -426,11 +426,11 @@ export default function Careers() {
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             <div className="flex items-center gap-3">
               <Mail size={20} className="text-gold" />
-              <span className="font-medium">careers@yourcompany.com</span>
+              <span className="font-medium">airtechnicservice@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
               <Phone size={20} className="text-gold" />
-              <span className="font-medium">+91 22 1234 5678</span>
+              <span className="font-medium">+91 9136283995</span>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Shield, Smile, Trophy, Users, Award, Clock, CheckCircle, Target, Eye, Heart, Star } from 'lucide-react';
-
+import Link from 'next/link';
 export default function About() {
   const values = [
     {
@@ -406,16 +406,7 @@ export default function About() {
         >
           Start Your Project Today
         </motion.button>
-        <motion.button 
-          whileHover={{ 
-            scale: 1.05,
-            boxShadow: "0 10px 25px -5px rgba(210, 170, 80, 0.2)"
-          }} 
-          whileTap={{ scale: 0.95 }} 
-          className="bg-white border-2 border-gold text-gold px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/5 transition-all duration-300 shadow-md"
-        >
-          Contact Our Team
-        </motion.button>
+   
       </div>
     </motion.div>
   </div>
