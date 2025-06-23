@@ -4,7 +4,6 @@ const mahajanImages = [
   "/projects/mahajan/1.jpeg",
   "/projects/mahajan/2.jpeg",
   "/projects/mahajan/3.jpeg",
-  "/projects/mahajan/4.jpeg",
 ];
 
 export default function MahajanCarousel() {

@@ -330,7 +330,7 @@ export default function Careers() {
                       name="phone"
                       required
                       className="pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:border-gold focus:ring-gold py-3"
-                      placeholder="+91 9876543210"
+                      placeholder="+91 9136283995"
                     />
                   </div>
                 </div>
