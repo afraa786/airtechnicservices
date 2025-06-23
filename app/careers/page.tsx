@@ -8,45 +8,44 @@ import Link from 'next/link';
 const jobOpenings = [
   {
     id: 1,
-    title: "HVAC Installation Technician",
+    title: "Installation Technician",
     type: "Full-time",
     location: "Mumbai",
     description: "Install, maintain, and repair HVAC systems for residential and commercial clients. Manufacturer certification training provided.",
     requirements: [
-      "3+ years HVAC experience",
+      "3+ years experience",
       "Technical diploma preferred",
       "Valid driver's license",
       "Physical fitness for installation work"
     ],
     benefits: [
       "Competitive salary + bonuses",
-      "Health insurance",
       "Ongoing training",
       "Tool allowance"
     ]
   },
   {
     id: 2,
-    title: "HVAC Service Engineer",
+    title: "Service Engineer",
     type: "Full-time",
-    location: "Mumbai & Navi Mumbai",
+    location: "Mumbai",
     description: "Diagnose and repair HVAC systems with a focus on VRF and commercial systems. Manufacturer certification required (training available).",
     requirements: [
-      "5+ years service experience",
+      "2+ years service experience",
       "VRF system knowledge",
       "Electrical certification",
       "Problem-solving skills"
     ],
     benefits: [
       "Higher base salary",
-      "Commission on repairs",
-      "Company vehicle",
-      "Advanced training"
+      "Advanced training",
+      "Performance bonuses",
+
     ]
   },
   {
     id: 3,
-    title: "Sales Executive - HVAC Solutions",
+    title: "Sales Executive",
     type: "Full-time",
     location: "Mumbai Metropolitan Region",
     description: "Sell HVAC solutions to residential and commercial clients. Build relationships with contractors and architects.",
@@ -57,7 +56,6 @@ const jobOpenings = [
       "Goal-oriented mindset"
     ],
     benefits: [
-      "Uncapped commission",
       "Lead generation support",
       "High earning potential",
       "Flexible schedule"

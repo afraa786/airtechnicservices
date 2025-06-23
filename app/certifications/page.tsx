@@ -329,13 +329,6 @@ export default function Certifications() {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Work with Mumbai's most certified HVAC professionals for guaranteed quality and peace of mind
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
-            >
-              Get Certified Installation Quote
-            </motion.button>
           </motion.div>
         </div>
       </section>
