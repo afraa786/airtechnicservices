@@ -105,7 +105,7 @@ const Navigation = () => {
                 </motion.button>
               </Link>
             </div>
-x
+
             {/* Mobile menu button */}
             <button
               className="md:hidden p-2 -mr-2"

@@ -53,8 +53,6 @@ const Footer = () => {
                 { href: '/', label: 'Home' },
                 { href: '/projects', label: 'Top 10 Projects' },
                 { href: '/about', label: 'Our Expertise' },
-                { href: '/clients/hotels', label: 'Hotel Clients' },
-                { href: '/clients/hospitals', label: 'Hospital Clients' },
                 { href: '/contact', label: 'Contact Us' },
                 { href: '/certifications', label: 'Certifications' },
                 { href: '/careers', label: 'Careers' },
@@ -130,7 +128,7 @@ const Footer = () => {
               © 2024 Air Technic Services. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
-              Mumbai & Navi Mumbai | Licensed & Insured
+              Pan India | Licensed & Insured
             </p>
           </div>
         </div>

@@ -94,15 +94,16 @@ export default function Home() {
                   <ArrowRight size={20} />
                 </motion.button>
               </Link>
+<motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => (window.location.href = 'http://localhost:3000/contact')}
+  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-navy transition-colors flex items-center gap-2 justify-center"
+>
+  <Phone size={20} />
+  Get Free Quote
+</motion.button>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-navy transition-colors flex items-center gap-2 justify-center"
-              >
-                <Phone size={20} />
-                Get Free Quote
-              </motion.button>
             </motion.div>
           </motion.div>
         </div>
@@ -168,7 +169,7 @@ export default function Home() {
             className="text-center mt-12"
           >
             <p className="text-lg text-gray-700 font-medium">
-              <span className="text-navy font-bold">Mumbai & Navi Mumbai</span> |
+              <span className="text-navy font-bold">Pan India</span> |
               Serving Hotels, Hospitals, Malls, Holy Places & More
             </p>
           </motion.div>

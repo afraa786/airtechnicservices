@@ -396,16 +396,18 @@ export default function About() {
         Join hundreds of satisfied clients who trust us with their HVAC needs.
       </p>
       <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <motion.button 
-          whileHover={{ 
-            scale: 1.05,
-            boxShadow: "0 10px 25px -5px rgba(210, 170, 80, 0.4)"
-          }} 
-          whileTap={{ scale: 0.95 }} 
-          className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-all duration-300 shadow-md"
-        >
-          Start Your Project Today
-        </motion.button>
+  <motion.button 
+  whileHover={{ 
+    scale: 1.05,
+    boxShadow: "0 10px 25px -5px rgba(210, 170, 80, 0.4)"
+  }} 
+  whileTap={{ scale: 0.95 }} 
+  onClick={() => window.location.href = '/contact'}
+  className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-all duration-300 shadow-md"
+>
+  Start Your Project Today
+</motion.button>
+
    
       </div>
     </motion.div>

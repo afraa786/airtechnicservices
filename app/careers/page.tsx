@@ -47,7 +47,7 @@ const jobOpenings = [
     id: 3,
     title: "Sales Executive",
     type: "Full-time",
-    location: "Mumbai Metropolitan Region",
+    location: "Mumbai",
     description: "Sell HVAC solutions to residential and commercial clients. Build relationships with contractors and architects.",
     requirements: [
       "Sales experience in HVAC/construction",

@@ -15,7 +15,9 @@ import OasisCarousel from './oasis';
 import ShethCarousel from './sheth';
 import GoregoanCarousel from './goregoan';
 import CinepolisCarousel from './cinepolis';
+import KandivaliCarousel from './kandivali';
 
+import MahajanCarousel from './mahajan';
 
 const projects = [
   {
@@ -92,15 +94,15 @@ const projects = [
   },
   {
     id: 7,
-    title: "Shidhewar Temple",
-    category: "Holy Places",
+    title: "Shree Kandivali Hitwardhak Mandal Hospital",
+    category: "Hospitals",
     location: "Mumbai",
     year: "2022",
-    service: "Thermal Management",
-    achievement: "Improved Air Quality",
-    description: "Advanced thermal management system with thermal imaging verification.",
+    service: "HVAC management",
+    achievement: "Enhanced Air Quality",
+    description: "HVAC management system with thermal imaging verification for air quality in hospital.",
     image: "Thermal imaging of temple airflow",
-    tags: ["Thermal", "Religious", "Air Quality"]
+    tags: ["HVAC", "Hospital", "Air Quality"]
   },
   {
     id: 8,
@@ -174,7 +176,7 @@ const projects = [
     image: "/projects/sies.jpeg", // ✅ Correct
     tags: ["VRF", "Energy Efficient", "Luxury"]
   },
-    {
+  {
     id: 15,
     title: "The Great Oasis",
     category: "Commercial",
@@ -186,18 +188,18 @@ const projects = [
     image: "/projects/oasis.jpeg", // ✅ Correct
     tags: ["VRF", "Energy Efficient", "Luxury"]
   },
-    {
+  {
     id: 16,
     title: "Cinepolis",
     category: "Malls",
     location: "Mumbai",
     year: "2020",
-  service: "Cinepolis HVAC System Installation",
-  achievement: "Silent Airflow, Zero Disruptions",
-  description: "Engineered and installed a customized HVAC system for Cinepolis, ensuring silent air distribution with time-lapse monitored ducting work suited for cinema acoustics.",
-  image: "Cinepolis HVAC installation time-lapse",
-  tags: ["Cinepolis", "Cinema HVAC", "Acoustic Ducting", "Precision"]
-},
+    service: "Cinepolis HVAC System Installation",
+    achievement: "Silent Airflow, Zero Disruptions",
+    description: "Engineered and installed a customized HVAC system for Cinepolis, ensuring silent air distribution with time-lapse monitored ducting work suited for cinema acoustics.",
+    image: "Cinepolis HVAC installation time-lapse",
+    tags: ["Cinepolis", "Cinema HVAC", "Acoustic Ducting", "Precision"]
+  },
 ];
 
 const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
@@ -274,8 +276,8 @@ export default function Projects() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleCategoryChange(category)}
                   className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-medium transition-all text-sm md:text-base whitespace-nowrap ${selectedCategory === category
-                      ? 'bg-navy text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-navy text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >
                   {category}
@@ -320,37 +322,45 @@ export default function Projects() {
                       <div className="w-full h-full">
                         <TaibaMosqueCarousel />
                       </div>
-                         ) : project.id === 2 ? (
+                    ) : project.id === 2 ? (
                       <div className="w-full h-full">
                         <IITPowaiCarousel />
                       </div>
-                           ) : project.id === 9 ? (
+                    ) : project.id === 9 ? (
                       <div className="w-full h-full">
                         <BBluntCarousel />
                       </div>
-                           ) : project.id === 1 ? (
+                    ) : project.id === 1 ? (
                       <div className="w-full h-full">
                         <PCarousel />
                       </div>
-                           ) : project.id === 14 ? (
+                    ) : project.id === 14 ? (
                       <div className="w-full h-full">
                         <SIESCarousel />
                       </div>
-                          ) : project.id === 15 ? (
+                    ) : project.id === 15 ? (
                       <div className="w-full h-full">
                         <OasisCarousel />
                       </div>
-                          ) : project.id === 10 ? (
+                    ) : project.id === 10 ? (
                       <div className="w-full h-full">
                         <ShethCarousel />
                       </div>
-                             ) : project.id === 8 ? (
+                    ) : project.id === 8 ? (
                       <div className="w-full h-full">
                         <GoregoanCarousel />
                       </div>
-                               ) : project.id === 16 ? (
+                    ) : project.id === 16 ? (
                       <div className="w-full h-full">
                         <CinepolisCarousel />
+                      </div>
+                      ) : project.id === 5 ? (
+                      <div className="w-full h-full">
+                        <MahajanCarousel />
+                      </div>
+                       ) : project.id === 7 ? (
+                      <div className="w-full h-full">
+                        <KandivaliCarousel />
                       </div>
                     ) : project.image ? (
                       <img
@@ -452,11 +462,13 @@ export default function Projects() {
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.95 }}  
+              onClick={() => (window.location.href = 'http://localhost:3000/contact')}
               className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
             >
-              Get Your Free Consultation
+              Contact Us Today
             </motion.button>
+
           </motion.div>
         </div>
       </section>
