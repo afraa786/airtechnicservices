@@ -6,11 +6,13 @@ import path from 'path';
 import nodemailer from 'nodemailer';
 
 // Disable default body parsing
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// route.js (example)
+export const dynamic = 'force-dynamic'  // ✅ use direct exports for config
+
+export async function POST(req) {
+  // your handler logic
+}
+
 
 function streamToIncomingMessage(req) {
   const readable = Readable.from(req.body);
