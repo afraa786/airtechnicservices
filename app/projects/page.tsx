@@ -68,9 +68,9 @@ const projects = [
   },
   {
     id: 5,
-    title: "Metro Hospital",
+    title: "Dr. Mahajan Hospital",
     category: "Hospitals",
-    location: "Mumbai",
+    location: "Navi Mumbai",
     year: "2022",
     service: "Critical Care HVAC",
     achievement: "99.9% Uptime",
