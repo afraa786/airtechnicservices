@@ -16,7 +16,7 @@ import ShethCarousel from './sheth';
 import GoregoanCarousel from './goregoan';
 import CinepolisCarousel from './cinepolis';
 import KandivaliCarousel from './kandivali';
-
+import ONGCButcherIslandCarousel from './ongc';
 import MahajanCarousel from './mahajan';
 
 const projects = [
@@ -55,18 +55,6 @@ const projects = [
     description: "High-performance chiller system installation ensuring efficient cooling and energy optimization for large-scale facilities.",
     image: "/airindia.jpeg",
     tags: ["Ventilation", "energy optimization", "Energy Saving"]
-  },
-  {
-    id: 4,
-    title: "Sante Fe Hotel",
-    category: "Hotels",
-    location: "Navi Mumbai",
-    year: "2023",
-    service: "Ductwork Installation",
-    achievement: "Zero Downtime",
-    description: "Complete ductwork installation with time-lapse monitoring.",
-    image: "Time-lapse ductwork installation",
-    tags: ["Ductwork", "Hotel", "Precision"]
   },
   {
     id: 5,
@@ -200,9 +188,21 @@ const projects = [
     image: "Cinepolis HVAC installation time-lapse",
     tags: ["Cinepolis", "Cinema HVAC", "Acoustic Ducting", "Precision"]
   },
+  {
+  id: 17,
+  title: "ONGC Butcher Island",
+  category: "Industrial",
+  location: "Mumbai",
+  year: "2024",
+  service: "Pressurized Ventilation System",
+  achievement: "Hazard-Free Operation Zone",
+  description: "Designed and installed explosion-proof, pressurized ventilation systems for oil terminal safety and temperature control.",
+  image: "/projects/ongc.jpeg", // Replace with actual path to your image
+  tags: ["Industrial HVAC", "Explosion-proof", "Safety", "Oil Terminal"]
+}
 ];
 
-const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
+const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Industrial", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -361,6 +361,10 @@ export default function Projects() {
                        ) : project.id === 7 ? (
                       <div className="w-full h-full">
                         <KandivaliCarousel />
+                      </div>
+                      ) : project.id === 17 ? (
+                      <div className="w-full h-full">
+                        <ONGCButcherIslandCarousel />
                       </div>
                     ) : project.image ? (
                       <img
