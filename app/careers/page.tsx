@@ -1,9 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Upload, Mail, Phone, User, Briefcase, FileText, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { Upload, Mail, Phone, User, Briefcase, FileText, ArrowRight, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+
+
+
+
 
 const jobOpenings = [
   {
@@ -82,12 +87,44 @@ const benefits = [
 ];
 
 export default function Careers() {
+  const [loading, setLoading] = useState(false);
+
+  const handleApplySubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/api/careeremail', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast.success('Application submitted successfully!');
+        form.reset(); // Reset the form
+      } else {
+        const resData = await response.json();
+        toast.error(resData.error || 'Failed to submit application');
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error('Something went wrong. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen pt-24">
+      <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
+
       {/* Careers Hero Section */}
       <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -195,7 +232,7 @@ export default function Careers() {
                     </ul>
                   </div>
 
-                  <Link 
+                  <Link
                     href="#apply"
                     className="w-full bg-navy text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-navy/90 transition-colors"
                   >
@@ -276,7 +313,8 @@ export default function Careers() {
             viewport={{ once: true }}
             className="bg-white rounded-xl shadow-lg p-8 text-navy"
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleApplySubmit}>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -354,27 +392,39 @@ export default function Careers() {
               </div>
 
               <div>
-                <label htmlFor="resume" className="block text-sm font-medium text-gray-700 mb-1">
-                  Upload Resume (PDF or DOC)
-                </label>
-                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                  <div className="space-y-1 text-center">
-                    <div className="flex text-sm text-gray-600 justify-center">
-                      <label
-                        htmlFor="resume-upload"
-                        className="relative cursor-pointer bg-white rounded-md font-medium text-gold hover:text-gold/80 focus-within:outline-none"
-                      >
-                        <span>Upload a file</span>
-                        <input id="resume-upload" name="resume" type="file" className="sr-only" accept=".pdf,.doc,.docx" />
-                      </label>
-                      <p className="pl-1">or drag and drop</p>
-                    </div>
-                    <p className="text-xs text-gray-500">
-                      PDF, DOC, DOCX up to 5MB
-                    </p>
-                  </div>
-                </div>
-              </div>
+  <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-1">
+    Upload Resume (PDF or DOC)
+  </label>
+  <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+    <div className="space-y-1 text-center">
+      <div className="flex text-sm text-gray-600 justify-center items-center gap-1">
+        <label
+          htmlFor="file"
+          className="relative cursor-pointer bg-white rounded-md font-medium text-gold hover:text-gold/80 focus-within:outline-none"
+        >
+          <span>Upload a file</span>
+        </label>
+        <p className="text-gray-500">or drag and drop</p>
+      </div>
+      <input
+        id="file"
+        name="file"
+        type="file"
+        accept=".pdf,.doc,.docx"
+        required
+        className="mt-2 block w-full text-sm text-gray-500
+          file:mr-4 file:py-2 file:px-4
+          file:rounded-md file:border-0
+          file:text-sm file:font-semibold
+          file:bg-gold file:text-navy
+          hover:file:bg-gold/90
+        "
+      />
+      <p className="text-xs text-gray-500">PDF, DOC, DOCX up to 5MB</p>
+    </div>
+  </div>
+</div>
+
 
               <div>
                 <label htmlFor="cover-letter" className="block text-sm font-medium text-gray-700 mb-1">
@@ -407,10 +457,20 @@ export default function Careers() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-gold text-navy py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-gold text-navy py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
+                  disabled={loading}
                 >
-                  Submit Application <ArrowRight size={18} />
+                  {loading ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin" /> Sending...
+                    </>
+                  ) : (
+                    <>
+                      Submit Application <ArrowRight size={18} />
+                    </>
+                  )}
                 </motion.button>
+
               </div>
             </form>
           </motion.div>

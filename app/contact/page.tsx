@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, Award } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Award, Loader2 } from 'lucide-react';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,12 +11,15 @@ export default function Contact() {
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+    setLoading(true);
+
     try {
       const response = await fetch('/api/sendemail', {
         method: 'POST',
@@ -27,11 +31,11 @@ export default function Contact() {
           email: formData.email,
         }),
       });
-  
+
       const data = await response.json();
-  
+
       if (response.ok) {
-        alert('Email sent successfully!');
+        toast.success('Email sent successfully!');
         setFormData({
           name: '',
           email: '',
@@ -40,23 +44,25 @@ export default function Contact() {
           message: '',
         });
       } else {
-        alert(`Failed to send email: ${data.error || 'Unknown error'}`);
+        toast.error(`Failed to send email: ${data.error || 'Unknown error'}`);
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('Something went wrong. Please try again later.');
+      toast.error('Something went wrong. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
-  
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
+
 
   const services = [
     'VRF System Installation',
@@ -70,6 +76,8 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-24">
+       {/* Toast container */}
+       <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
       {/* Hero Section */}
  {/* Contact Hero Section */}
 <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
@@ -123,6 +131,21 @@ export default function Contact() {
                     placeholder="Your full name"
                   />
                 </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold transition-colors"
+                    placeholder="+91 XXXXX XXXXX"
+                  />
+                </div>
               </div>
 
               <div>
@@ -141,15 +164,51 @@ export default function Contact() {
                 />
               </div>
 
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  Service Required
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold transition-colors"
+                >
+                  <option value="">Select a service</option>
+                  {services.map((service) => (
+                    <option key={service} value={service}>
+                      {service}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Details
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold transition-colors resize-none"
+                  placeholder="Tell us about your project requirements, location, timeline, etc."
+                />
+              </div>
+
               <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-gold text-navy py-4 px-6 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2"
-              >
-                <Send size={20} />
-                Get Free Quote
-              </motion.button>
+        type="submit"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        className="w-full bg-gold text-navy py-4 px-6 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
+        disabled={loading}
+      >
+        {loading ? <Loader2 className="animate-spin" size={20} /> : <Send size={20} />}
+        {loading ? 'Sending...' : 'Get Free Quote'}
+      </motion.button>
             </form>
           </motion.div>
 
@@ -190,8 +249,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy">Call Us</h3>
-                    <p className="text-gray-600">+91 9136283995</p>
-                     <p className="text-gray-600">+91 9820418015</p>
+                    <p className="text-gray-600">+91 9820418015</p>
                   </div>
                 </div>
               </div>
@@ -203,8 +261,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy">Email Us</h3>
-                    <p className="text-gray-600">airtechnicservice@gmail.com</p>
-                    <p className="text-gray-600">airtechnic14@gmail.com</p>
+                    <p className="text-gray-600">info@airtechnicservices.com</p>
                   </div>
                 </div>
               </div>
