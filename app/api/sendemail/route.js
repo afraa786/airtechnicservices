@@ -69,7 +69,7 @@ export async function POST(request) {
             <td style="padding: 8px;">${project_details || 'N/A'}</td>
           </tr>
         </table>
-        <p style="margin-top: 30px;">📎 Quotation PDF is also attached with this request.</p>
+        
       </div>
     `,
     });

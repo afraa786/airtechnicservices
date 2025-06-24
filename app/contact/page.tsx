@@ -29,6 +29,9 @@ export default function Contact() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
+          phone: formData.phone,
+          service_require: formData.service,
+          project_details: formData.message, 
         }),
       });
 
@@ -76,27 +79,27 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-24">
-       {/* Toast container */}
-       <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
+      {/* Toast container */}
+      <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
       {/* Hero Section */}
- {/* Contact Hero Section */}
-<section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="text-center"
-    >
-      <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-        Get In <span className="text-gold">Touch</span>
-      </h1>
-      <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-        Ready to experience the best HVAC solutions in Mumbai? Let's discuss your project.
-      </p>
-    </motion.div>
-  </div>
-</section>
+      {/* Contact Hero Section */}
+      <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+              Get In <span className="text-gold">Touch</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+              Ready to experience the best HVAC solutions in Mumbai? Let's discuss your project.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
         {/* Form + Info Grid */}
@@ -200,15 +203,15 @@ export default function Contact() {
               </div>
 
               <motion.button
-        type="submit"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        className="w-full bg-gold text-navy py-4 px-6 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
-        disabled={loading}
-      >
-        {loading ? <Loader2 className="animate-spin" size={20} /> : <Send size={20} />}
-        {loading ? 'Sending...' : 'Get Free Quote'}
-      </motion.button>
+                type="submit"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-gold text-navy py-4 px-6 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
+                disabled={loading}
+              >
+                {loading ? <Loader2 className="animate-spin" size={20} /> : <Send size={20} />}
+                {loading ? 'Sending...' : 'Get Free Quote'}
+              </motion.button>
             </form>
           </motion.div>
 

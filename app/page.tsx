@@ -35,7 +35,7 @@ const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) =
   return <span>{count}</span>;
 };
 
-export default function Home() {
+ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -94,15 +94,15 @@ export default function Home() {
                   <ArrowRight size={20} />
                 </motion.button>
               </Link>
-<motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  onClick={() => (window.location.href = 'http://localhost:3000/contact')}
-  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-navy transition-colors flex items-center gap-2 justify-center"
->
-  <Phone size={20} />
-  Get Free Quote
-</motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => (window.location.href = 'http://localhost:3000/contact')}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-navy transition-colors flex items-center gap-2 justify-center"
+              >
+                <Phone size={20} />
+                Get Free Quote
+              </motion.button>
 
             </motion.div>
           </motion.div>

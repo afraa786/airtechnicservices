@@ -92,44 +92,44 @@ const additionalCertifications = [
 
 export default function Certifications() {
   return (
-<div className="min-h-screen pt-24">
-  {/* Certifications Hero Section */}
-  <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center"
-      >
-        <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
-          <Award size={40} className="text-navy" />
+    <div className="min-h-screen pt-24">
+      {/* Certifications Hero Section */}
+      <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <Award size={40} className="text-navy" />
+            </div>
+            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+              Our <span className="text-gold">Certifications</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
+              Authorized partnerships with leading HVAC manufacturers and certified compliance with industry standards
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <div className="flex items-center gap-2">
+                <Shield className="text-gold" size={16} />
+                <span>ISO 9001:2015 Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="text-gold" size={16} />
+                <span>Licensed & Insured</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="text-gold" size={16} />
+                <span>Authorized Dealer Network</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
-        <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-          Our <span className="text-gold">Certifications</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-          Authorized partnerships with leading HVAC manufacturers and certified compliance with industry standards
-        </p>
-        <div className="flex flex-wrap justify-center gap-6 text-sm">
-          <div className="flex items-center gap-2">
-            <Shield className="text-gold" size={16} />
-            <span>ISO 9001:2015 Certified</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="text-gold" size={16} />
-            <span>Licensed & Insured</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Star className="text-gold" size={16} />
-            <span>Authorized Dealer Network</span>
-          </div>
-        </div>
-      </motion.div>
-  </div>
-</section>
-    {/* Stats Section */}
-    <section className="py-16 bg-white">
+      </section>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {companyStats.map((stat, index) => (
@@ -150,7 +150,7 @@ export default function Certifications() {
       </section>
 
       {/* Brand Partnerships */}
-       <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -225,7 +225,7 @@ export default function Certifications() {
 
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
                     <div className="h-40 relative mb-4">
-                      <Image 
+                      <Image
                         src={cert.certificateImage}
                         alt={`${cert.company} Certificate`}
                         fill
@@ -238,7 +238,7 @@ export default function Certifications() {
                       />
                     </div>
                     {cert.certificateLink && (
-                      <Link 
+                      <Link
                         href={cert.certificateLink}
                         target="_blank"
                         rel="noopener noreferrer"

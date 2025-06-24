@@ -199,7 +199,103 @@ const projects = [
   description: "Designed and installed explosion-proof, pressurized ventilation systems for oil terminal safety and temperature control.",
   image: "/projects/ongc.jpeg", // Replace with actual path to your image
   tags: ["Industrial HVAC", "Explosion-proof", "Safety", "Oil Terminal"]
-}
+},
+  {
+    id: 16,
+    title: "Sahara Hotel",
+    category: "Hotels",
+    location: "Mumbai",
+    year: "2024",
+    service: "Ducting Work",
+    achievement: "Custom Duct Design",
+    description: "Executed complex ducting work tailored for high-performance airflow distribution in luxury hospitality.",
+    image: "Sahara ducting",
+    tags: ["Hotel", "Ducting", "Airflow"]
+  },
+    {
+    id: 17,
+    title: "Nadiadwala Grandsons",
+    category: "Commercial",
+    location: "Andheri",
+    year: "2024",
+    service: "VRF Outdoor Unit Replacement",
+    achievement: "Efficient Upgrade",
+    description: "Replaced VRF outdoor units to improve performance and reduce load.",
+    image: "/projects/nadiadwala.jpeg",
+    tags: ["VRF", "Upgrade", "Film Industry"]
+  },
+  {
+    id: 18,
+    title: "Birla Carbon",
+    category: "Industrial",
+    location: "Mumbai",
+    year: "2024",
+    service: "New AHU Installation",
+    achievement: "Increased Air Flow",
+    description: "Installed advanced AHU systems for improved air flow in an industrial setting.",
+    image: "/projects/birlacarbon.jpeg",
+    tags: ["AHU", "Industrial", "Air Quality"]
+  },
+    {
+    id: 19,
+    title: "Ascendas",
+    category: "Commercial",
+    location: "Mumbai",
+    year: "2024",
+    service: "AHU Replacement, Chill Water Pipelining, Ventilation and Ducting",
+    achievement: "Finance-Grade Infrastructure Upgrade",
+    description: "Comprehensive HVAC upgrade including AHU replacement, chill water pipelines, ducting, and ventilation systems for a high-profile finance-sector building.",
+    image: "Ascendas HVAC system",
+    tags: ["AHU", "Finance", "Ventilation", "Pipelining"]
+  },
+  {
+    id: 20,
+    title: "Morgan Stanley",
+    category: "Offices",
+    location: "Mumbai",
+    year: "2024",
+    service: "AHU Replacement",
+    achievement: "Enhanced Office Cooling",
+    description: "Replaced old AHUs with energy-efficient units in a commercial finance office tower to ensure optimal cooling and air quality.",
+    image: "Morgan Stanley AHU replacement",
+    tags: ["AHU", "Office", "Finance", "Efficiency"]
+  },
+  {
+    id: 21,
+    title: "Baruch RMC Plant",
+    category: "Industrial",
+    location: "Wadala, Mumbai",
+    year: "2024",
+    service: "Chiller Installation with Chill Water Pipelining and Pump Setup",
+    achievement: "End-to-End Cooling Solution",
+    description: "Installed industrial-grade chiller along with chill water pipelines and pump systems for efficient cooling in RMC manufacturing environment.",
+    image: "Baruch chiller setup",
+    tags: ["Chiller", "Industrial", "Pipelining", "RMC Plant"]
+    },
+  {
+    id: 20,
+    title: "CtrlS Data Center",
+    category: "Commercial",
+    location: "Mahape",
+    year: "2024",
+    service: "Commercial Building HVAC",
+    achievement: "Uptime Ready Cooling",
+    description: "Delivered precise HVAC solution for CtrlS commercial building with high-reliability cooling systems at Mahape.",
+    image: "Mahape commercial CtrlS",
+    tags: ["Commercial", "CtrlS", "Precision HVAC", "Mahape"]
+  },
+  {
+    id: 21,
+    title: "NSE Bandra",
+    category: "Commercial",
+    location: "Bandra, Mumbai",
+    year: "2024",
+    service: "HVAC System Installation",
+    achievement: "Stock Exchange Climate Control",
+    description: "Installed high-efficiency HVAC system for the National Stock Exchange offices in Bandra.",
+    image: "NSE Bandra HVAC",
+    tags: ["NSE", "Finance", "Bandra", "Photos Available"]
+  }
 ];
 
 const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Industrial", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
@@ -230,7 +326,7 @@ export default function Projects() {
             className="text-center"
           >
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-gold">Top 15</span> Projects
+              Our <span className="text-gold">Top</span> Projects
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
               Showcasing excellence across diverse sectors with innovative HVAC solutions

@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 
 const imageList = [
-  "/projects/cac/1.jpeg",
+  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/1.jpeg",
   "/projects/cac/2.jpeg",
   "/projects/cac/3.jpeg",
-    "/projects/cac/4.jpeg",
+  "/projects/cac/4.jpeg",
 ];
 
 export default function CacCarousel() {
