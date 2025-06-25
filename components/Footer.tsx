@@ -79,7 +79,7 @@ const Footer = () => {
                   <p className="text-gray-300 text-sm leading-relaxed">
                     NASHEMAN CHS LTD, SHOP NO 8,<br />
                     BLDG NO 17, AMRUT NAGAR,<br />
-                    NR AJIT GLASS FACTORY,<br />
+                    NEAR AJIT GLASS FACTORY,<br />
                     JOGESHWARI (WEST)<br />
                     MUMBAI – 400 102
                   </p>
