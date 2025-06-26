@@ -18,6 +18,17 @@ import CinepolisCarousel from './cinepolis';
 import KandivaliCarousel from './kandivali';
 import ONGCButcherIslandCarousel from './ongc';
 import MahajanCarousel from './mahajan';
+import NadiadwalaCarousel from './nadiadwala';
+import BirlaCarousel from './birla';
+import AscendasCarousel from './ascendas';
+import PhoenixCarousel from './phoenix';
+import MorganCarousel from './morgan';
+import CtrlCarousel from './ctrl';
+import BaruchCarousel from './baruch';
+import NseCarousel from './nse';
+import SaharaCarousel from './sahara';
+import SraCarousel from './sra';
+import RangCarousel from './rang';
 
 const projects = [
   {
@@ -72,13 +83,13 @@ const projects = [
     id: 6,
     title: "Phoenix Mall",
     category: "Malls",
-    location: "Mumbai",
+    location: "Wakad, Pune",
     year: "2023",
-    service: "Central Air Conditioning",
+    service: "Chilled Water Pipelining in Common Areas",
     achievement: "25% Cost Reduction",
-    description: "Large-scale central air conditioning system for shopping complex.",
-    image: "Mall central AC installation",
-    tags: ["Retail", "Central AC", "Large Scale"]
+    description: "Efficient chilled water pipelining system implemented across common areas of the mall for enhanced cooling and energy savings.",
+    image: "Mall chilled water pipelining",
+    tags: ["Retail", "Chilled Water", "Energy Efficient"]
   },
   {
     id: 7,
@@ -106,7 +117,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "B'blunt",
+    title: "B'blunt Salon (Kemps Corner)",
     category: "Salons",
     location: "Mumbai",
     year: "2023",
@@ -133,7 +144,7 @@ const projects = [
     title: "CAC Air Conditioning",
     category: "Offices",
     location: "Navi Mumbai",
-    years: "2018",
+    year: "2018",
     service: "VRF, Chiller Controls and Chiller Installation",
     achievement: "Integrated Controls Delivered Precision Cooling & Reduced Downtime",
     description: "Complete HVAC solution for office spaces with VRF and chiller systems.",
@@ -145,7 +156,7 @@ const projects = [
     title: "Taiba Mosque",
     category: "Holy Places",
     location: "Mumbai",
-    year: "2022",
+    year: "2021",
     service: "AC Installation",
     achievement: "Centralised Air Conditioning",
     description: "Centralised air conditioning system for religious place with thermal imaging verification.",
@@ -153,11 +164,23 @@ const projects = [
     tags: ["AC", "Religious", "Air Quality"]
   },
   {
+    id: 13,
+    title: "ONGC Butcher Island",
+    category: "Industrial",
+    location: "Mumbai",
+    year: "2016",
+    service: "Pressurized Ventilation System",
+    achievement: "Hazard-Free Operation Zone",
+    description: "Designed and installed explosion-proof, pressurized ventilation systems for oil terminal safety and temperature control.",
+    image: "/projects/ongc.jpeg", // Replace with actual path to your image
+    tags: ["Industrial HVAC", "Explosion-proof", "Safety", "Oil Terminal"]
+  },
+  {
     id: 14,
     title: "SIES College",
     category: "Educational",
     location: "Navi Mumbai",
-    year: "2020",
+    year: "2021",
     service: "Ducting, Kitchen Ventilation, and Chiller Installation",
     achievement: "Ventilation System for Kitchen",
     description: "Complete HVAC solution for educational institution with ducting and kitchen ventilation.",
@@ -178,10 +201,10 @@ const projects = [
   },
   {
     id: 16,
-    title: "Cinepolis",
+    title: "Fun Republic",
     category: "Malls",
-    location: "Mumbai",
-    year: "2020",
+    location: "Multiple Branches, Mumbai",
+    year: "2022",
     service: "Cinepolis HVAC System Installation",
     achievement: "Silent Airflow, Zero Disruptions",
     description: "Engineered and installed a customized HVAC system for Cinepolis, ensuring silent air distribution with time-lapse monitored ducting work suited for cinema acoustics.",
@@ -189,35 +212,11 @@ const projects = [
     tags: ["Cinepolis", "Cinema HVAC", "Acoustic Ducting", "Precision"]
   },
   {
-  id: 17,
-  title: "ONGC Butcher Island",
-  category: "Industrial",
-  location: "Mumbai",
-  year: "2024",
-  service: "Pressurized Ventilation System",
-  achievement: "Hazard-Free Operation Zone",
-  description: "Designed and installed explosion-proof, pressurized ventilation systems for oil terminal safety and temperature control.",
-  image: "/projects/ongc.jpeg", // Replace with actual path to your image
-  tags: ["Industrial HVAC", "Explosion-proof", "Safety", "Oil Terminal"]
-},
-  {
-    id: 16,
-    title: "Sahara Hotel",
-    category: "Hotels",
-    location: "Mumbai",
-    year: "2024",
-    service: "Ducting Work",
-    achievement: "Custom Duct Design",
-    description: "Executed complex ducting work tailored for high-performance airflow distribution in luxury hospitality.",
-    image: "Sahara ducting",
-    tags: ["Hotel", "Ducting", "Airflow"]
-  },
-    {
     id: 17,
     title: "Nadiadwala Grandsons",
     category: "Commercial",
     location: "Andheri",
-    year: "2024",
+    year: "2022",
     service: "VRF Outdoor Unit Replacement",
     achievement: "Efficient Upgrade",
     description: "Replaced VRF outdoor units to improve performance and reduce load.",
@@ -229,19 +228,19 @@ const projects = [
     title: "Birla Carbon",
     category: "Industrial",
     location: "Mumbai",
-    year: "2024",
+    year: "2022",
     service: "New AHU Installation",
     achievement: "Increased Air Flow",
     description: "Installed advanced AHU systems for improved air flow in an industrial setting.",
     image: "/projects/birlacarbon.jpeg",
     tags: ["AHU", "Industrial", "Air Quality"]
   },
-    {
+  {
     id: 19,
     title: "Ascendas",
-    category: "Commercial",
+    category: "Finance",
     location: "Mumbai",
-    year: "2024",
+    year: "2023",
     service: "AHU Replacement, Chill Water Pipelining, Ventilation and Ducting",
     achievement: "Finance-Grade Infrastructure Upgrade",
     description: "Comprehensive HVAC upgrade including AHU replacement, chill water pipelines, ducting, and ventilation systems for a high-profile finance-sector building.",
@@ -253,7 +252,7 @@ const projects = [
     title: "Morgan Stanley",
     category: "Offices",
     location: "Mumbai",
-    year: "2024",
+    year: "2023",
     service: "AHU Replacement",
     achievement: "Enhanced Office Cooling",
     description: "Replaced old AHUs with energy-efficient units in a commercial finance office tower to ensure optimal cooling and air quality.",
@@ -265,15 +264,15 @@ const projects = [
     title: "Baruch RMC Plant",
     category: "Industrial",
     location: "Wadala, Mumbai",
-    year: "2024",
+    year: "2023",
     service: "Chiller Installation with Chill Water Pipelining and Pump Setup",
     achievement: "End-to-End Cooling Solution",
     description: "Installed industrial-grade chiller along with chill water pipelines and pump systems for efficient cooling in RMC manufacturing environment.",
     image: "Baruch chiller setup",
     tags: ["Chiller", "Industrial", "Pipelining", "RMC Plant"]
-    },
+  },
   {
-    id: 20,
+    id: 22,
     title: "CtrlS Data Center",
     category: "Commercial",
     location: "Mahape",
@@ -285,7 +284,7 @@ const projects = [
     tags: ["Commercial", "CtrlS", "Precision HVAC", "Mahape"]
   },
   {
-    id: 21,
+    id: 23,
     title: "NSE Bandra",
     category: "Commercial",
     location: "Bandra, Mumbai",
@@ -295,10 +294,64 @@ const projects = [
     description: "Installed high-efficiency HVAC system for the National Stock Exchange offices in Bandra.",
     image: "NSE Bandra HVAC",
     tags: ["NSE", "Finance", "Bandra", "Photos Available"]
-  }
+  },
+  {
+    id: 24,
+    title: "Sahara Hotel",
+    category: "Hotels",
+    location: "Mumbai",
+    year: "2024",
+    service: "Ducting Work",
+    achievement: "Custom Duct Design",
+    description: "Executed complex ducting work tailored for high-performance airflow distribution in luxury hospitality.",
+    image: "Sahara ducting",
+    tags: ["Hotel", "Ducting", "Airflow"]
+  },
+  {
+    id: 25,
+    title: "SRA Slum Rehabilitation Center",
+    category: "Public Infrastructure",
+    location: "Mumbai",
+    year: "2025",
+    service: "AHU Installation & Ducting Work",
+    achievement: "Enhanced Ventilation Efficiency",
+    description: "Installed AHUs and executed ducting work to improve indoor air quality and thermal comfort for the residential rehabilitation center.",
+    image: "SRA_ahu_ducting",
+    tags: ["Public Infrastructure", "AHU", "Ducting", "Ventilation"]
+  },
+  {
+  id: 26,
+  title: "Rang Sharda Hotel",
+  category: "Hotels",
+  location: "Bandra, BKC, Mumbai",
+  year: "2023",
+  service: "Chilled Water Pump Maintenance & Electrical Panel Revamping",
+  achievement: "System Reliability Upgrade",
+  description: "Performed comprehensive maintenance of chilled water pumps and revamped electrical panels to ensure efficient and uninterrupted hotel operations.",
+  image: "rang_sharda_bkc",
+  tags: ["Hotel", "Chilled Water", "Electrical", "Maintenance"]
+}
 ];
 
-const categories = ["All", "Hotels", "Hospitals", "Holy Places", "Malls", "Educational", "Sports", "Industrial", "Salons", "Clinics", "Offices", "Flight Operations", "Commercial"];
+
+const categories = [
+  "All",
+  "Clinics",
+  "Commercial",
+  "Educational",
+  "Finance",
+  "Flight Operations",
+  "Holy Places",
+  "Hospitals",
+  "Hotels",
+  "Industrial",
+  "Malls",
+  "Offices",
+  "Salons",
+  "Sports",
+  "Public Infrastructure"
+];
+
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -450,25 +503,70 @@ export default function Projects() {
                       <div className="w-full h-full">
                         <CinepolisCarousel />
                       </div>
-                      ) : project.id === 5 ? (
+                    ) : project.id === 5 ? (
                       <div className="w-full h-full">
                         <MahajanCarousel />
                       </div>
-                       ) : project.id === 7 ? (
+                    ) : project.id === 7 ? (
                       <div className="w-full h-full">
                         <KandivaliCarousel />
                       </div>
-                      ) : project.id === 17 ? (
+                    ) : project.id === 17 ? (
+                      <div className="w-full h-full">
+                        <NadiadwalaCarousel />
+                      </div>
+                    ) : project.id === 13 ? (
                       <div className="w-full h-full">
                         <ONGCButcherIslandCarousel />
                       </div>
-                    ) : project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
+                      ) : project.id === 18 ? (
+                        <div className="w-full h-full">
+                          <BirlaCarousel />
+                        </div>
+                      ) : project.id === 19 ? (
+                        <div className="w-full h-full">
+                          <AscendasCarousel />
+                        </div>
+                      ) : project.id === 6 ? (
+                        <div className="w-full h-full">
+                          <PhoenixCarousel />
+                        </div>
+                      ) : project.id === 20 ? (
+                        <div className="w-full h-full">
+                          <MorganCarousel />
+                        </div>
+                      ) : project.id === 22 ? (
+                        <div className="w-full h-full">
+                          <CtrlCarousel />
+                        </div>
+                      ) : project.id === 21 ? (
+                        <div className="w-full h-full">
+                          <BaruchCarousel />
+                        </div>
+                      ) : project.id === 23 ? (
+                        <div className="w-full h-full">
+                          <NseCarousel />
+                        </div>
+                      ) : project.id === 24 ? (
+                        <div className="w-full h-full">
+                          <SaharaCarousel />
+                        </div>
+                      
+                      ) : project.id === 25 ? (
+                        <div className="w-full h-full">
+                          <SraCarousel />
+                        </div>
+                         ) : project.id === 26 ? (
+                        <div className="w-full h-full">
+                          <RangCarousel />
+                        </div>
+                      ) : project.image ? (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
                       <div className="h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-500 relative">
                         <div className="text-center z-10">
                           <Building size={40} className="mx-auto mb-2" />
@@ -562,7 +660,7 @@ export default function Projects() {
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}  
+              whileTap={{ scale: 0.95 }}
               onClick={() => (window.location.href = 'http://localhost:3000/contact')}
               className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
             >

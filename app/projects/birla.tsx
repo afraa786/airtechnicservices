@@ -1,17 +1,18 @@
+
 import { useEffect, useState } from "react";
 
-const ongcImages = [
-  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ongc1.jpeg",
- "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ongc2.jpeg",
-  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ongc3.jpeg",
+const birlaImages = [
+  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/birlaaa.jpeg",
+  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/birla.jpeg",
+  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/birlaa.jpeg",
 ];
 
-export default function ONGCButcherIslandCarousel() {
+export default function BirlaCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % ongcImages.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % birlaImages.length);
     }, 4000);
 
     return () => clearInterval(timer);
@@ -19,11 +20,11 @@ export default function ONGCButcherIslandCarousel() {
 
   return (
     <div className="relative w-full h-80 overflow-hidden rounded-xl shadow-lg">
-      {ongcImages.map((src, index) => (
+      {birlaImages.map((src, index) => (
         <img
           key={index}
           src={src}
-          alt={`ONGC Butcher Island Image ${index + 1}`}
+          alt={`Birla Image ${index + 1}`}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}

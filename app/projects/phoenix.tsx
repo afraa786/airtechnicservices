@@ -1,19 +1,19 @@
 // CacCarousel.tsx
 import { useEffect, useState } from "react";
 
-const imageList = [
-  "/projects/cac/1.jpeg",
-  "/projects/cac/2.jpeg",
-  "/projects/cac/3.jpeg",
-  "/projects/cac/4.jpeg",
+const phoenixImages = [
+"https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/a.jpeg",
+"https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/b.jpeg",
+"https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/c.jpeg",
+"https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/d.jpeg"
 ];
 
-export default function CacCarousel() {
+export default function PhoenixCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % phoenixImages.length);
     }, 4000);
 
     return () => clearInterval(timer);
@@ -21,7 +21,7 @@ export default function CacCarousel() {
 
   return (
     <div className="relative w-full h-80 overflow-hidden rounded-xl shadow-lg">
-      {imageList.map((src, index) => (
+      {phoenixImages.map((src, index) => (
         <img
           key={index}
           src={src}

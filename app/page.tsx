@@ -6,7 +6,8 @@ import { ArrowRight, Users, Building, Award, Clock, Phone } from 'lucide-react';
 import Link from 'next/link';
 import PallidiumCarousel from './projects/PCarousel';
 import IITPowaiCarousel from './projects/IITPowaiCarousel';
-import TaibaMosqueCarousel from './projects/TaibaMosqueCarousel';
+import NadiadwalaCarousel from './projects/nadiadwala';
+
 
 
 
@@ -35,7 +36,7 @@ const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) =
   return <span>{count}</span>;
 };
 
- export default function Home() {
+export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -210,11 +211,13 @@ const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) =
                 image: "Engineers with ductable splits"
               },
               {
-                title: "Taiba Mosque",
-                category: "Holy Place Ventilation",
-                achievement: "40% Energy Reduction",
-                image: "Mosque ventilation system"
-              }
+                title: "Nadiadwala Grandsons",
+                category: "VRF Replacement",
+                achievement: "Efficient Upgrade",
+                image: "Engineers with ductable splits"
+              
+              },
+
             ].map((project, index) => (
               <Link href="/projects" key={index}>
                 <motion.div
@@ -230,8 +233,8 @@ const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) =
                       <PallidiumCarousel />
                     ) : project.title === "IIT Powai" ? (
                       <IITPowaiCarousel />
-                    ) : project.title === "Taiba Mosque" ? (
-                      <TaibaMosqueCarousel />
+                    ) : project.title === "Nadiadwala Grandsons" ? (
+                      <NadiadwalaCarousel />
                     ) : (
                       <img
                         src={project.image}

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const kandivaliImages = [
- "/projects/kandivali/1.jpeg",
- "/projects/kandivali/2.jpeg",
+ "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/1.jpeg",
+ "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/2.jpeg",
 ];
 
 export default function KandivaliCarousel() {
