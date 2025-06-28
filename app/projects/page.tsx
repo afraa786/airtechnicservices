@@ -29,6 +29,7 @@ import NseCarousel from './nse';
 import SaharaCarousel from './sahara';
 import SraCarousel from './sra';
 import RangCarousel from './rang';
+import BarkatCarousel from './barkat';
 
 const projects = [
   {
@@ -330,7 +331,20 @@ const projects = [
   description: "Performed comprehensive maintenance of chilled water pumps and revamped electrical panels to ensure efficient and uninterrupted hotel operations.",
   image: "rang_sharda_bkc",
   tags: ["Hotel", "Chilled Water", "Electrical", "Maintenance"]
+},
+{
+  id: 27,
+  title: "Al Barkaat Malik Muhammad Islam English School",
+  category: "Educational",
+  location: "Kurla, Mumbai",
+  year: "2025",
+  service: "VRF Installation",
+  achievement: "Enhanced Campus-Wide Cooling",
+  description: "Successfully installed a complete VRF (Variable Refrigerant Flow) system across the entire school building to provide efficient cooling in all classrooms. The project involved precise zoning for optimal climate control and long-term energy savings.",
+  image: "al_barkaat_school_kurla",
+  tags: ["Educational", "VRF", "Cooling", "Classrooms", "Installation"]
 }
+
 ];
 
 
@@ -559,6 +573,10 @@ export default function Projects() {
                          ) : project.id === 26 ? (
                         <div className="w-full h-full">
                           <RangCarousel />
+                        </div>
+                         ) : project.id === 27 ? (
+                        <div className="w-full h-full">
+                          <BarkatCarousel />
                         </div>
                       ) : project.image ? (
                         <img

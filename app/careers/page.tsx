@@ -392,39 +392,38 @@ export default function Careers() {
               </div>
 
               <div>
-  <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-1">
-    Upload Resume (PDF or DOC)
-  </label>
-  <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-    <div className="space-y-1 text-center">
-      <div className="flex text-sm text-gray-600 justify-center items-center gap-1">
-        <label
-          htmlFor="file"
-          className="relative cursor-pointer bg-white rounded-md font-medium text-gold hover:text-gold/80 focus-within:outline-none"
-        >
-          <span>Upload a file</span>
-        </label>
-        <p className="text-gray-500">or drag and drop</p>
-      </div>
-      <input
-        id="file"
-        name="file"
-        type="file"
-        accept=".pdf,.doc,.docx"
-        required
-        className="mt-2 block w-full text-sm text-gray-500
+                <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-1">
+                  Upload Resume (PDF or DOC)
+                </label>
+                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                  <div className="space-y-1 text-center">
+                    <div className="flex text-sm text-gray-600 justify-center items-center gap-1">
+                      <label
+                        htmlFor="file"
+                        className="relative cursor-pointer bg-white rounded-md font-medium text-gold hover:text-gold/80 focus-within:outline-none"
+                      >
+                        <span>Upload a file</span>
+                      </label>
+                      <p className="text-gray-500">or drag and drop</p>
+                    </div>
+                    <input
+                      id="file"
+                      name="file"
+                      type="file"
+                      accept=".pdf,.doc,.docx"
+                      required
+                      className="mt-2 block w-full text-sm text-gray-500
           file:mr-4 file:py-2 file:px-4
           file:rounded-md file:border-0
           file:text-sm file:font-semibold
           file:bg-gold file:text-navy
           hover:file:bg-gold/90
         "
-      />
-      <p className="text-xs text-gray-500">PDF, DOC, DOCX up to 5MB</p>
-    </div>
-  </div>
-</div>
-
+                    />
+                    <p className="text-xs text-gray-500">PDF, DOC, DOCX up to 5MB</p>
+                  </div>
+                </div>
+              </div>
 
               <div>
                 <label htmlFor="cover-letter" className="block text-sm font-medium text-gray-700 mb-1">
