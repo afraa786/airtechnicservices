@@ -40,7 +40,9 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative py-20 flex items-center justify-center overflow-hidden">
+
+
         {/* Background Image Placeholder */}
         <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/80 to-navy/70">
           <div className="absolute inset-0 hero-pattern"></div>
@@ -215,7 +217,7 @@ export default function Home() {
                 category: "VRF Replacement",
                 achievement: "Efficient Upgrade",
                 image: "Engineers with ductable splits"
-              
+
               },
 
             ].map((project, index) => (
@@ -326,7 +328,26 @@ export default function Home() {
                 <p className="text-gray-600">{service.desc}</p>
               </motion.div>
             ))}
+
           </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link href="/services">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-navy text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-navy/90 transition-colors"
+              >
+                View All Services
+              </motion.button>
+            </Link>
+          </motion.div>
+
         </div>
       </section>
     </div>

@@ -314,24 +314,93 @@ export default function Certifications() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-navy mb-6">
-              Trust the <span className="text-gold">Certified</span> Experts
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Work with Mumbai's most certified HVAC professionals for guaranteed quality and peace of mind
-            </p>
-          </motion.div>
-        </div>
-      </section>
+{/* Additional Certifications */}
+<section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-20"
+    >
+      <h2 className="font-display text-4xl md:text-5xl font-bold text-navy-800 mb-6">
+        Additional <span className="text-gold-500">Certifications</span>
+      </h2>
+      <div className="w-24 h-1.5 bg-gold-400 mx-auto mb-6 rounded-full"></div>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        We are also accredited by government and global agencies for safety, electrical, and quality compliance
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      {additionalCertifications.map((cert, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gold-100 group"
+        >
+          <div className="flex items-start mb-4">
+            <div className="bg-gold-50 p-3 rounded-lg mr-4 group-hover:bg-gold-100 transition-colors">
+              <svg className="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-navy-800 mb-2 group-hover:text-gold-600 transition-colors">{cert.title}</h3>
+              <p className="text-gray-600 mb-3 leading-relaxed">{cert.description}</p>
+              <div className="flex flex-wrap gap-4 text-sm">
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-navy-700 flex items-center">
+                  <svg className="w-4 h-4 mr-1 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  {cert.issuer}
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-navy-700 flex items-center">
+                  <svg className="w-4 h-4 mr-1 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {cert.year}
+                </span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+{/* Trust the Certified Experts */}
+<section className="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div className="max-w-4xl mx-auto text-center px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="font-display text-4xl md:text-5xl font-bold text-navy-800 mb-6">
+        Trust the <span className="text-gold-500">Certified</span> Experts
+      </h2>
+      <div className="w-20 h-1.5 bg-gold-400 mx-auto mb-6 rounded-full"></div>
+      <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Work with Mumbai's most certified HVAC professionals for guaranteed quality and peace of mind
+      </p>
+          <motion.button
+                 whileHover={{ scale: 1.05 }}
+                 whileTap={{ scale: 0.95 }}
+                 onClick={() => (window.location.href = 'http://localhost:3000/contact')}
+                 className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
+               >
+                 Contact Us Today
+               </motion.button>
+   
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 }

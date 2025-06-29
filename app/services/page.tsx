@@ -296,6 +296,7 @@ export default function Services() {
                     </motion.div>
                 </div>
             </section>
+            
 
             {/* Our Services */}
             <section className="py-20 bg-white">
@@ -314,6 +315,7 @@ export default function Services() {
                             Professional HVAC solutions tailored to your specific requirements
                         </p>
                     </motion.div>
+                    
 
                     <div className="grid grid-cols-1 gap-16">
                         {services.map((service, index) => (
