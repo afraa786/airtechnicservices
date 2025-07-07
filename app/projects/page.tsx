@@ -309,18 +309,6 @@ const projects = [
     tags: ["Hotel", "Ducting", "Airflow"]
   },
   {
-    id: 25,
-    title: "SRA Slum Rehabilitation Center",
-    category: "Public Infrastructure",
-    location: "Mumbai",
-    year: "2025",
-    service: "AHU Installation & Ducting Work",
-    achievement: "Enhanced Ventilation Efficiency",
-    description: "Installed AHUs and executed ducting work to improve indoor air quality and thermal comfort for the residential rehabilitation center.",
-    image: "SRA_ahu_ducting",
-    tags: ["Public Infrastructure", "AHU", "Ducting", "Ventilation"]
-  },
-  {
   id: 26,
   title: "Rang Sharda Hotel",
   category: "Hotels",
