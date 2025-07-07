@@ -331,7 +331,20 @@ const projects = [
   description: "Successfully installed a complete VRF (Variable Refrigerant Flow) system across the entire school building to provide efficient cooling in all classrooms. The project involved precise zoning for optimal climate control and long-term energy savings.",
   image: "al_barkaat_school_kurla",
   tags: ["Educational", "VRF", "Cooling", "Classrooms", "Installation"]
-}
+},
+{
+  id: 28,
+  title: "Mumbai Metro – MMRDA",
+  category: "Public Infrastructure",
+  location: "Mumbai",
+  year: "2025",
+  service: "Central AC Installation",
+  achievement: "Optimized Station Climate Comfort",
+  description: "Carried out complete Central Air Conditioning installation at the Mumbai Metro station under MMRDA to ensure reliable, consistent cooling for commuters and staff. The project focused on enhancing commuter experience and maintaining temperature uniformity across the station premises.",
+  image: "mumbai_metro_mmrdac_ac_installation",
+  tags: ["Public Infrastructure", "Central AC", "MMRDA", "Metro Station", "Cooling"]
+},
+
 
 ];
 
@@ -667,7 +680,8 @@ export default function Projects() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => (window.location.href = 'http://localhost:3000/contact')}
+            onClick={() => (window.location.href = '/contact')}
+
               className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
             >
               Contact Us Today

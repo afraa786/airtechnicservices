@@ -392,7 +392,8 @@ export default function Certifications() {
           <motion.button
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
-                 onClick={() => (window.location.href = 'http://localhost:3000/contact')}
+                onClick={() => (window.location.href = '/contact')}
+
                  className="bg-gold text-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-colors"
                >
                  Contact Us Today
