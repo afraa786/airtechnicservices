@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Award, Shield, CheckCircle, Download, ExternalLink, Building, Users, Calendar, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { link } from 'node:fs';
+import React from 'react';
 const certifications = [
   {
     id: 1,
@@ -68,25 +70,29 @@ const additionalCertifications = [
     title: "ISO 9001:2015",
     description: "Quality Management System Certification",
     issuer: "International Organization for Standardization",
-    year: "2022"
+    year: "2022",
+    link: "https://www.iso.org/iso-9001-quality-management.html",
   },
   {
     title: "HVAC Contractor License",
     description: "Mumbai Municipal Corporation Licensed Contractor",
     issuer: "BMC",
-    year: "2014"
+    year: "2014",
+    link: "https://portal.mcgm.gov.in/irj/portal/anonymous/qlicensing",
   },
   {
     title: "Electrical Contractor License",
     description: "Licensed Electrical Contractor for HVAC Systems",
     issuer: "Maharashtra State Electricity Board",
-    year: "2015"
+    year: "2015",
+    link: "https://www.mahadiscom.in/en/electrical-contractors/",
   },
   {
     title: "Safety Compliance Certificate",
     description: "Workplace Safety and Installation Standards",
-    issuer: "Industrial Safety Department",
-    year: "2023"
+    issuer: "Indian Institute of Technology, Bombay",
+    year: "2023",
+    link: "https://www.iitb.ac.in/en/safety-compliance",
   }
 ];
 
@@ -353,6 +359,15 @@ export default function Certifications() {
               <h3 className="text-2xl font-bold text-navy-800 mb-2 group-hover:text-gold-600 transition-colors">{cert.title}</h3>
               <p className="text-gray-600 mb-3 leading-relaxed">{cert.description}</p>
               <div className="flex flex-wrap gap-4 text-sm">
+                <a
+  href={cert.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-4 text-gold-600 font-semibold hover:text-gold-800 transition-colors"
+>
+  View Certificate &rarr;
+</a>
+
                 <span className="bg-gray-100 px-3 py-1 rounded-full text-navy-700 flex items-center">
                   <svg className="w-4 h-4 mr-1 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
