@@ -253,6 +253,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-navy">Call Us</h3>
                     <p className="text-gray-600">+91 9820418015</p>
+                    <p className="text-gray-600">+91 9136283995</p>
                   </div>
                 </div>
               </div>
@@ -264,7 +265,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy">Email Us</h3>
-                    <p className="text-gray-600">info@airtechnicservices.com</p>
+                    <p className="text-gray-600">airtechnicservice@gmail.com</p>
+                    <p className="text-gray-600">airtechnic14@gmail.com</p>
+                    
                   </div>
                 </div>
               </div>
@@ -323,7 +326,7 @@ export default function Contact() {
                   <p>✓ ISO 9001:2015 Certified</p>
                   <p>✓ Licensed HVAC Contractors</p>
                   <p>✓ Insured & Bonded</p>
-                  <p>✓ 10+ Years Experience</p>
+                  <p>✓ 10+ Years of Excellence</p>
                 </div>
               </div>
             </div>

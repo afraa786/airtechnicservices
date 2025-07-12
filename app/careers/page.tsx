@@ -4,11 +4,7 @@ import { motion } from 'framer-motion';
 import { Upload, Mail, Phone, User, Briefcase, FileText, ArrowRight, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
-
-
-
-
+import toast, { Toaster } from 'react-hot-toast'; 
 
 const jobOpenings = [
   {

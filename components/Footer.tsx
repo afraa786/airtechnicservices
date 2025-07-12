@@ -51,7 +51,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { href: '/', label: 'Home' },
-                { href: '/projects', label: 'Top 10 Projects' },
+                { href: '/projects', label: 'Top Projects' },
                 { href: '/about', label: 'Our Expertise' },
                 { href: '/contact', label: 'Contact Us' },
                 { href: '/certifications', label: 'Certifications' },
@@ -91,10 +91,14 @@ const Footer = () => {
                 <span className="text-gray-300">+91 9136283995</span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Mail size={20} className="text-gold" />
-                <span className="text-gray-300">airtechnicservice@gmail.com</span>
-              </div>
+             <div className="flex items-start gap-3">
+  <Mail size={20} className="text-gold mt-1" />
+  <div className="text-gray-300 leading-relaxed">
+    <p>airtechnicservice@gmail.com</p>
+    <p>airtechnic14@gmail.com</p>
+  </div>
+</div>
+
             </div>
           </div>
         </div>

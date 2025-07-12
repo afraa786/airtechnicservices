@@ -11,51 +11,54 @@ const certifications = [
     id: 1,
     company: "O'General",
     type: "Authorized Dealer & Service Partner",
-    year: "2020-2024",
+    year: "Since 2024",
     description: "Certified for installation, maintenance, and service of O'General VRF systems, split ACs, and commercial HVAC solutions.",
     features: ["VRF Systems", "Split AC Units", "Commercial HVAC", "Warranty Support"],
-    certificateImage: "O'General dealer certificate",
+    certificateImage: "/general.jpg",
+    certificateLink: "/general.pdf", 
     logo: "O'General",
     status: "Active",
     color: "from-red-500 to-red-600"
   },
-  {
-    id: 2,
-    company: "Zamil Air Conditioners",
-    type: "Authorized Installation Partner",
-    year: "2019-2024",
-    description: "Certified partner for Zamil industrial and commercial air conditioning systems with specialized training in large-scale installations.",
-    features: ["Industrial HVAC", "Commercial Systems", "Chiller Units", "Maintenance"],
-    certificateImage: "/zamil-cert.jpeg",
-    certificateLink: "/zamil-cert.pdf",
-    logo: "Zamil",
-    status: "Active",
-    color: "from-blue-500 to-blue-600"
-  },
+{  id: 2,
+  company: "ISO 9001:2015",
+  type: "Quality Management Certification",
+  year: "Since 2014",
+  description: "Recognized for maintaining internationally approved standards in quality control, operational excellence, and customer satisfaction within HVAC services.",
+  features: ["Process Compliance", "Customer Focus", "Quality Assurance", "Continuous Improvement"],
+  certificateImage: "/iit.jpg",  // Make sure the image exists
+  certificateLink: "/iit.pdf",    // Replace with the actual ISO certificate file path
+  logo: "ISO",
+  status: "Active",
+  color: "from-gray-600 to-gray-800"
+},
   {
     id: 3,
     company: "Samsung HVAC",
     type: "Certified Service Provider",
-    year: "2021-2024",
+    year: "Since 2015",
     description: "Authorized service provider for Samsung DVM (Digital Variable Multi) systems and commercial air conditioning solutions.",
     features: ["DVM Systems", "Multi-Split Units", "Smart Controls", "Energy Solutions"],
-    certificateImage: "Samsung HVAC certification",
+    certificateImage: "/samsung.jpg",
+    certificateLink: "/samsung.pdf", 
     logo: "Samsung",
     status: "Active",
     color: "from-purple-500 to-purple-600"
   },
-  {
-    id: 4,
-    company: "Panasonic",
-    type: "work",
-    year: "2018-2024",
-    description: "Certified dealer and installer for Panasonic VRF systems, split ACs, and commercial HVAC solutions with advanced technical training.",
-    features: ["VRF Technology", "Eco Solutions", "Smart Systems", "Energy Efficiency"],
-    certificateImage: "Panasonic dealer certificate",
-    logo: "Panasonic",
-    status: "Active",
-    color: "from-green-500 to-green-600"
-  }
+{
+  id: 4,
+  company: "IIT Bombay",
+  type: "Work Completion Certificate",
+  year: "2023",
+  description: "Completed SITC of VRF/VRV system at IIT Bombay as per contract, demonstrating timely execution, compliance, and satisfaction across all technical requirements.",
+  features: ["VRF/VRV Systems", "Project Execution", "Timely Completion", "Government Contract"],
+  certificateImage: "/iso.jpg",       // Make sure this image exists in the public folder
+  certificateLink: "/iso.pdf",        // Optional: add a PDF version if available
+  logo: "IIT Bombay",
+  status: "Completed",
+  color: "from-blue-500 to-blue-700"
+},
+
 ];
 
 const companyStats = [
@@ -65,36 +68,36 @@ const companyStats = [
   { number: "100%", label: "Warranty Compliance" }
 ];
 
-const additionalCertifications = [
-  {
-    title: "ISO 9001:2015",
-    description: "Quality Management System Certification",
-    issuer: "International Organization for Standardization",
-    year: "2022",
-    link: "https://www.iso.org/iso-9001-quality-management.html",
-  },
-  {
-    title: "HVAC Contractor License",
-    description: "Mumbai Municipal Corporation Licensed Contractor",
-    issuer: "BMC",
-    year: "2014",
-    link: "https://portal.mcgm.gov.in/irj/portal/anonymous/qlicensing",
-  },
-  {
-    title: "Electrical Contractor License",
-    description: "Licensed Electrical Contractor for HVAC Systems",
-    issuer: "Maharashtra State Electricity Board",
-    year: "2015",
-    link: "https://www.mahadiscom.in/en/electrical-contractors/",
-  },
-  {
-    title: "Safety Compliance Certificate",
-    description: "Workplace Safety and Installation Standards",
-    issuer: "Indian Institute of Technology, Bombay",
-    year: "2023",
-    link: "https://www.iitb.ac.in/en/safety-compliance",
-  }
-];
+// const additionalCertifications = [
+//   {
+//     title: "ISO 9001:2015",
+//     description: "Quality Management System Certification",
+//     issuer: "International Organization for Standardization",
+//     year: "2022",
+//     link: "https://www.iso.org/iso-9001-quality-management.html",
+//   },
+//   {
+//     title: "HVAC Contractor License",
+//     description: "Mumbai Municipal Corporation Licensed Contractor",
+//     issuer: "BMC",
+//     year: "2014",
+//     link: "https://portal.mcgm.gov.in/irj/portal/anonymous/qlicensing",
+//   },
+//   {
+//     title: "Electrical Contractor License",
+//     description: "Licensed Electrical Contractor for HVAC Systems",
+//     issuer: "Maharashtra State Electricity Board",
+//     year: "2015",
+//     link: "https://www.mahadiscom.in/en/electrical-contractors/",
+//   },
+//   {
+//     title: "Safety Compliance Certificate",
+//     description: "Workplace Safety and Installation Standards",
+//     issuer: "Indian Institute of Technology, Bombay",
+//     year: "2023",
+//     link: "https://www.iitb.ac.in/en/safety-compliance",
+//   }
+// ];
 
 export default function Certifications() {
   return (
@@ -166,7 +169,7 @@ export default function Certifications() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold text-navy mb-6">
-              Authorized <span className="text-gold">Brand Partners</span>
+              Authorized <span className="text-gold">Certifications</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We are certified dealers and service providers for leading HVAC manufacturers worldwide
@@ -320,7 +323,7 @@ export default function Certifications() {
         </div>
       </section>
 
-{/* Additional Certifications */}
+{/* Additional Certifications
 <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <motion.div
@@ -387,7 +390,7 @@ export default function Certifications() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 {/* Trust the Certified Experts */}
 <section className="py-20 bg-gradient-to-b from-white to-gray-50">
   <div className="max-w-4xl mx-auto text-center px-4">

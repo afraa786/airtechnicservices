@@ -7,6 +7,8 @@ import Link from 'next/link';
 import PallidiumCarousel from './projects/PCarousel';
 import IITPowaiCarousel from './projects/IITPowaiCarousel';
 import NadiadwalaCarousel from './projects/nadiadwala';
+import { BadgeCheck, Globe, Building2, Layers3 } from 'lucide-react';
+
 
 
 
@@ -100,7 +102,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => (window.location.href = 'http://localhost:3000/contact')}
+               onClick={() => (window.location.href = '/contact')}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-navy transition-colors flex items-center gap-2 justify-center"
               >
                 <Phone size={20} />
@@ -350,6 +352,75 @@ export default function Home() {
 
         </div>
       </section>
+     {/* About the Company Section */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="font-display text-4xl md:text-5xl font-bold text-navy mb-4">
+        About <span className="text-gold">Our Company</span>
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Delivering Reliable HVAC Since 2014. Backed by an experienced team and modern infrastructure, we’re committed to delivering HVAC systems that meet the highest standards of quality, performance, and energy efficiency.
+      </p>
+    </motion.div>
+
+    {/* Company Highlights */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      {[
+        { icon: BadgeCheck, title: "ISO 9001:2015 Certified", desc: "Strict adherence to international quality standards" },
+        { icon: Globe, title: "Pan-India Reach", desc: "HVAC projects executed across multiple states" },
+        { icon: Building2, title: "Industry-compliant Processes", desc: "Regulatory-approved installation and safety protocols" },
+        { icon: Layers3, title: "Multi-sector Expertise", desc: "Experience in commercial, healthcare, and industrial sectors" },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.05 }}
+          className="text-center p-6 rounded-xl border-2 border-gray-100 hover:border-gold/50 transition-colors"
+        >
+          <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <item.icon className="text-navy" size={32} />
+          </div>
+          <h3 className="font-display text-xl font-bold text-navy mb-3">{item.title}</h3>
+          <p className="text-gray-600">{item.desc}</p>
+        </motion.div>
+      ))}
     </div>
-  );
-}
+
+    {/* CTA */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center"
+    >
+      <h2 className="font-display text-4xl md:text-5xl font-bold text-navy mb-4">
+        Start your HVAC project with <span className="text-gold">Confidence</span>
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+       Let our experienced HVAC technicians handle your cooling and ventilation needs from start to finish. 
+      </p><br />
+
+      <button
+        onClick={() => (window.location.href = '/contact')}
+        className="bg-navy text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-navy/90 transition-colors"
+      >
+        Start Your HVAC Project
+      </button>
+    </motion.div>
+  </div>
+</section>
+        
+      </div>
+    );
+  }

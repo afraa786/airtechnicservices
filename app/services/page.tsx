@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Hammer, Settings, Zap, Droplets, Fan, HardHat, Wrench, CircuitBoard } from 'lucide-react';
+import { Hammer, Settings, Zap, Droplets, Fan, HardHat, Wrench, CircuitBoard, Wind, Cpu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -37,223 +37,226 @@ const ServiceImageCarousel = ({ images }: { images: string[] }) => {
 const services = [
     {
         id: 1,
-        title: "VRF System Installation",
-        description: "Professional installation of Variable Refrigerant Flow systems for optimal climate control in commercial spaces with multi-zone requirements.",
+        title: "HVAC System Design & Installation",
+        description: "Custom-engineered HVAC systems tailored for energy efficiency and indoor comfort across commercial and industrial buildings.",
         icon: Settings,
         images: [
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf3.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf4.jpeg",
-        ],
-        features: [
-            "Precision installation of indoor/outdoor units",
-            "Refrigerant piping and controls",
-            "System commissioning and testing",
-            "Manufacturer-certified technicians"
-        ],
-        process: [
-            "We begin with a detailed site survey to assess your building's layout and cooling requirements",
-            "Our engineers design a customized VRF system configuration for optimal performance",
-            "We install the outdoor units with proper vibration isolation and refrigerant line sets",
-            "Indoor units are strategically placed for balanced air distribution",
-            "The system is thoroughly tested and balanced before commissioning"
-        ]
-    },
-    {
-        id: 2,
-        title: "HVAC Solutions",
-        description: "Comprehensive heating, ventilation and air conditioning systems for residential and commercial properties.",
-        icon: Fan,
-        images: [
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/grp.jpg",
             "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/hvac1.jpeg",
             "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/hvac3.jpeg",
             "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/hvac4.jpeg",
             "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/hvac5.jpeg",
         ],
         features: [
-            "Energy-efficient system design",
-            "Ducted and ductless solutions",
-            "Regular maintenance programs",
-            "24/7 emergency repairs"
+            "Energy-efficient HVAC layouts",
+            "Customized ducted & ductless systems",
+            "Certified system installation",
+            "Post-installation performance check"
         ],
         process: [
-            "Our HVAC specialists conduct a comprehensive load calculation for your space",
-            "We recommend the most suitable system type based on your needs and budget",
-            "Installation is performed by certified technicians following manufacturer guidelines",
-            "All systems include a post-installation performance verification",
-            "We provide customized maintenance plans to ensure long-term efficiency"
+            "Comprehensive load analysis and site inspection",
+            "System type recommendation tailored to client needs",
+            "Certified technician-led installation",
+            "End-to-end commissioning with air balancing",
+            "Handover with client walk-through and documentation"
         ]
     },
     {
-        id: 3,
-        title: "Chiller Installation",
-        description: "Expert installation of industrial-grade chillers for large-scale cooling applications.",
+        id: 2,
+        title: "VRF Systems Installation",
+        description: "Expert installation and commissioning of Chiller and Variable Refrigerant Flow systems for advanced climate control solutions.",
         icon: Droplets,
         images: [
             "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chiller1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chiller2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chiller3.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf1.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf2.jpeg",
             "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chiller4.jpeg",
         ],
         features: [
-            "Air-cooled and water-cooled systems",
-            "Pipework and pump integration",
-            "Load testing and balancing",
-            "Energy optimization"
+            "Installation of both indoor and outdoor units",
+            "Proper refrigerant piping and smart control integration",
+            "Thorough system testing and commissioning",
+            "Installation by manufacturer-certified HVAC technicians"
         ],
         process: [
-            "Our team evaluates your facility's cooling load and space constraints",
-            "We select the appropriate chiller type (air-cooled or water-cooled)",
-            "Professional installation includes proper foundation and vibration isolation",
-            "Complete piping system installation with insulation and supports",
-            "System commissioning includes performance testing and operator training"
+            "We begin with a detailed site survey",
+            "Our engineers design a customized VRF system configuration",
+            "We install the outdoor units with proper vibration isolation",
+            "Indoor units are strategically placed for balanced air distribution",
         ]
     },
+{
+  id: 3,
+  title: "Chilled Water Pipelining",
+  description: "We design and install chilled water piping networks that enhance HVAC system efficiency in large-scale facilities. Our solutions are built for performance and long-term operation.",
+  icon: Wrench,
+  images: [
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chilledwater1.jpg",
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chilledwater2.jpg",
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chilledwater3.jpg",
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chilledwater4.jpg",
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater1.jpeg",
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater2.jpeg",
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater3.jpeg",
+  ],
+  features: [
+    "Professionally insulated piping",
+    "Pressure-tested sealed systems",
+    "Balanced chilled water flow",
+    "High-grade welded connections"
+  ],
+  process: [
+    "Piping layout with minimal pressure loss",
+    "Installation of supply and return lines",
+    "Thermal insulation for condensation control",
+    "Hydrostatic testing of pipelines"
+  ]
+},
     {
         id: 4,
-        title: "Chill Water Pipelining",
-        description: "Specialized chilled water piping systems for commercial HVAC applications.",
-        icon: Wrench,
+        title: "Chiller Installation",
+        description: "Our chiller installation services are ideal for large-scale cooling needs in commercial and industrial environments. We deliver end-to-end solutions using robust equipment and proven methods.",
+        icon: Zap,
         images: [
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater3.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater4.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillwater5.jpeg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/a1422441-a47e-4c9a-9fa4-8d046f56bfce.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/b261195d-de5b-4ad5-b4da-7ccd9215affc.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/b67de50f-d22c-4dda-82e4-79530fe23e0d.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chill.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/pill.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/28aba70f-5d51-466e-baec-c8fb67a3d3f2.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chillpill.jpg"
         ],
         features: [
-            "Insulated piping installations",
-            "Pressure testing and flushing",
-            "Flow balancing",
-            "Leak-proof welding techniques"
+            "Air-cooled and water-cooled chiller support",
+            "Integration with piping and pump systems",
+            "Full load testing and balancing",
+            "Energy-efficient installation strategy"
         ],
         process: [
-            "Detailed piping layout design to minimize pressure drops",
-            "Precision installation of chilled water supply and return lines",
-            "Proper insulation installation to prevent condensation",
-            "Hydrostatic pressure testing of all piping systems",
-            "Chemical treatment and flushing before system commissioning"
+            "Evaluate cooling load and space availability",
+            "Select appropriate chiller type and capacity",
+            "Install with proper foundation and isolation",
+            "Connect piping network with insulation",
         ]
     },
     {
         id: 5,
         title: "Ducting Systems",
-        description: "Custom-designed ductwork for efficient air distribution throughout your facility.",
+        description: "Our ductwork systems are custom-designed to ensure efficient airflow, minimal noise, and fire safety compliance. We use high-grade materials and design tools to deliver quality and reliability.",
         icon: HardHat,
         images: [
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting3.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting4.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting5.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting6.jpeg"
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting1.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting2.jpg",
+           "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ducting3.jpg"
         ],
         features: [
-            "Galvanized steel and flexible ducts",
-            "CFD-optimized airflow design",
-            "Noise reduction solutions",
-            "Smoke and fire dampers"
+            "Galvanized or flexible duct options",
+            "CFD-based airflow optimization",
+            "Noise and vibration dampening",
+            "Fire and smoke damper integration"
         ],
         process: [
-            "Computational Fluid Dynamics (CFD) analysis for optimal airflow design",
-            "Fabrication of custom ductwork in our controlled workshop",
-            "Precision installation with proper sealing and support",
-            "Integration with fire protection systems where required",
-            "Final airflow testing and balancing for optimal performance"
+            "CFD analysis for airflow and sizing",
+            "Custom duct fabrication in workshop",
+            "Sealed and supported on-site setup",
+            "Fire protection system coordination",
+            "Airflow testing and final balancing"
         ]
     },
     {
         id: 6,
         title: "Ventilation Solutions",
-        description: "Advanced ventilation systems to maintain optimal indoor air quality.",
-        icon: Zap,
-        images: [
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vent1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vent2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vent3.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vent4.jpeg"
-        ],
-        features: [
-            "Heat recovery ventilators",
-            "Exhaust systems",
-            "Air purification integration",
-            "CO2 monitoring systems"
-        ],
-        process: [
-            "Comprehensive indoor air quality assessment",
-            "Design of balanced ventilation systems with heat recovery",
-            "Installation of energy recovery ventilators (ERVs) or heat recovery ventilators (HRVs)",
-            "Integration with building automation systems for smart control",
-            "Commissioning with air quality monitoring verification"
-        ]
-    },
-    {
-        id: 7,
-        title: "AHU Installation",
-        description: "Professional Air Handling Unit installations for commercial buildings.",
-        icon: Wrench,
-        images: [
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu3.jpeg"
-        ],
-        features: [
-            "Custom AHU configurations",
-            "VAV system integration",
-            "Filter replacements",
-            "Vibration isolation"
-        ],
-        process: [
-            "Detailed load calculation and AHU selection",
-            "Structural assessment for proper unit placement",
-            "Professional installation with vibration isolation mounts",
-            "Ductwork connection with proper sealing",
-            "Electrical and control system integration",
-            "Performance testing and balancing"
-        ]
-    },
-    {
-        id: 8,
-        title: "Electrical Panel Revamping",
-        description: "Upgrading and modernizing electrical control panels for HVAC systems.",
+        description: "We provide advanced ventilation systems that support healthy indoor air quality. Our systems are energy-efficient, customizable, and seamlessly integrated with building automation.",
         icon: CircuitBoard,
         images: [
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/panel1.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/panel2.jpeg",
-            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/panel3.jpeg"
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ventilation.jpg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vent4.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vent3.jpeg"
         ],
         features: [
-            "Component replacement",
-            "Wiring upgrades",
-            "Safety compliance",
-            "Energy monitoring integration"
+            "Energy/heat recovery ventilators",
+            "Air exhaust & purification systems",
+            "Indoor air quality monitoring",
+            "Smart CO₂ level control options"
         ],
         process: [
-            "Comprehensive electrical system assessment",
-            "Development of revamping plan with minimal downtime",
-            "Replacement of outdated components with modern equivalents",
-            "Wiring upgrades with proper labeling",
-            "Safety system integration and testing",
-            "Energy monitoring system installation"
+            "Indoor air quality evaluation",
+            "Balanced system design with ERV/HRV",
+            "Professional installation & duct link-up",
+            "Automation and purifier integration"
         ]
-    }
+    },
+    {
+  id: 7,
+  title: "AHU Installation",
+  description: "We specialize in Air Handling Unit (AHU) installations for commercial spaces, ensuring reliable air circulation and filtration. Our units are designed to support energy-efficient and scalable operations.",
+  icon: Wind, // You can replace this with any other suitable icon if desired
+  images: [
+   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu1.jpg",
+   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu2.jpg",
+   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu3.jpg",
+   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu4.jpg",
+   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/ahu5.jpg"
+  ],
+  features: [
+    "Custom-configured AHUs",
+    "Vibration and noise dampening",
+    "Clean filtration systems"
+  ],
+  process: [
+    "System load analysis and AHU selection",
+    "Structural evaluation and unit placement",
+    "Mounting with vibration isolation",
+    "Duct and electrical connectivity"
+  ]
+},
+
+{
+  id: 8,
+  title: "Electrical Panel Revamping",
+  description: "We upgrade and modernize electrical control panels used in HVAC systems. Our services improve safety, enhance energy tracking, and ensure smooth performance.",
+  icon: Cpu,
+  images: [
+    "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chiller1.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf1.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/vrf2.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/chiller4.jpeg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/electricalpanel1.jpg",
+            "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/electricalpanel2.jpg"
+
+  ],
+  features: [
+    "Upgrade of outdated electrical components",
+    "Wiring enhancement and relabeling",
+    "Safety system installation",
+    "Energy monitoring device integration"
+  ],
+  process: [
+    "Comprehensive system assessment",
+    "Revamping plan with minimal downtime",
+    "Component replacement with modern equivalents",
+    "Wiring upgrades and clear labeling"
+  ]
+}
+
+
 ];
 
 const benefits = [
     {
-        title: "Certified Technicians",
-        description: "Our team holds manufacturer certifications and regular training",
+        title: "20+ Certified HVAC Technicians",
+        description: "Skilled and regularly trained experts certified by top HVAC system manufacturers for design, installation, and repair.",
         icon: Hammer
     },
     {
-        title: "Quality Assurance",
-        description: "All work backed by comprehensive warranties",
+        title: "Quality Assurance with Warranty",
+        description: "All installations and services are backed by ISO 9001:2015-certified processes and comprehensive warranties.",
         icon: Settings
     },
     {
-        title: "24/7 Support",
-        description: "Emergency services available round the clock",
+        title: "24/7 Emergency Response",
+        description: "Our dedicated teams are on standby to ensure uninterrupted climate control for your facility.",
         icon: Zap
     }
 ];
@@ -277,7 +280,8 @@ export default function Services() {
                             Our <span className="text-gold">HVAC Services</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-                            Comprehensive climate control solutions for residential, commercial and industrial applications
+                            From installation to maintenance and emergency support<br />
+                            We offer end-to-end HVAC solutions for businesses, institutions, and industries nationwide.
                         </p>
                         <div className="flex flex-wrap justify-center gap-6 text-sm">
                             <div className="flex items-center gap-2">
@@ -296,7 +300,7 @@ export default function Services() {
                     </motion.div>
                 </div>
             </section>
-            
+
 
             {/* Our Services */}
             <section className="py-20 bg-white">
@@ -315,8 +319,8 @@ export default function Services() {
                             Professional HVAC solutions tailored to your specific requirements
                         </p>
                     </motion.div>
-                    
-  
+
+
                     <div className="grid grid-cols-1 gap-16">
                         {services.map((service, index) => (
                             <motion.div
@@ -428,7 +432,7 @@ export default function Services() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-navy text-white">
+            <section className="py-20 bg-white text-navy">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -439,7 +443,7 @@ export default function Services() {
                         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
                             Ready to <span className="text-gold">Get Started?</span>
                         </h2>
-                        <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+                        <p className="text-xl text-black-200 max-w-3xl mx-auto mb-8">
                             Contact us today for a free consultation and quote on your HVAC needs
                         </p>
                         <motion.div

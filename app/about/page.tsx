@@ -261,8 +261,9 @@ export default function About() {
                     "Continuous training and skill development",
                     "Safety-first approach to all installations",
                     "Quality assurance at every step",
-                    "24/7 emergency support availability",
-                    "Industry-leading warranty on all work"
+                    "Industry-compliant Processes ",
+                    "Multi-sector Expertise",
+                    "Pan-India Reach "
                   ].map((point, index) => (
                     <motion.li
                       key={index}
