@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const barkatImages = [
   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/barkat1.jpeg",
- "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/barkat2.jpeg",
+  "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/barkat2.jpeg",
   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/barkat3.jpeg",
   "https://mhcfhsjqcgzipdykodnv.supabase.co/storage/v1/object/public/gallery/images/barkat4.jpeg",
 ];

@@ -9,10 +9,6 @@ import IITPowaiCarousel from './projects/IITPowaiCarousel';
 import NadiadwalaCarousel from './projects/nadiadwala';
 import { BadgeCheck, Globe, Building2, Layers3 } from 'lucide-react';
 
-
-
-
-
 const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);

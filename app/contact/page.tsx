@@ -81,8 +81,6 @@ export default function Contact() {
     <div className="min-h-screen pt-24">
       {/* Toast container */}
       <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
-      {/* Hero Section */}
-      {/* Contact Hero Section */}
       <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
           <motion.div
