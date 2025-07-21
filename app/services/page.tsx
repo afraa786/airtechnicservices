@@ -5,6 +5,7 @@ import { Hammer, Settings, Zap, Droplets, Fan, HardHat, Wrench, CircuitBoard, Wi
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Head from "next/head"
 
 // Image carousel component
 const ServiceImageCarousel = ({ images }: { images: string[] }) => {
@@ -262,7 +263,65 @@ const benefits = [
 ];
 
 export default function Services() {
+
     return (
+        <>
+           <Head>
+  <title>Professional HVAC Services Across India | Certified Experts </title>
+  <meta name="description" content="Get expert HVAC services for residential, commercial & industrial spaces. From installation to maintenance, we offer 24/7 support across India" />
+  <meta name="keywords" content="HVAC services  , AirTechnicServices  VRF, Chilled Water Pipelining, Chiller Installation, Ducting Systems, Ventilation Solutions, AHU Installation, Electrical Panel Revamping, Air Technic Services" />
+  <meta name="author" content="Air Technic Services" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Professional HVAC Services Across India | Certified Experts " />
+  <meta property="og:description" content="Get expert HVAC services for residential, commercial & industrial spaces. From installation to maintenance, we offer 24/7 support across India" />
+  <meta property="og:image" content="/ats-logo.png" />
+  <meta property="og:url" content="https://airtechnicservices.com/services" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Air Technic Services" />
+  <meta name="twitter:description" content="Expert HVAC solutions — installation, maintenance, repair across India." />
+  <meta name="twitter:image" content="/ats-logo.png" />
+
+  <link rel="canonical" href="https://airtechnicservices.com/" />
+  <link rel="icon" href="/ats-logo.png" />
+
+  {/* JSON-LD Schema for HVAC Business */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Air Technic Services",
+        url: "https://airtechnicservices.com",
+        logo: "https://airtechnicservices.com/ats-logo.png",
+        sameAs: [
+          "https://www.instagram.com/airtechnicservices/",
+          "https://www.linkedin.com/company/airtechnicservices/"
+        ],
+        description: "Air Technic Services delivers expert HVAC installations, VRF systems, and industrial ducting solutions across India.",
+        foundingDate: "2020",
+        founder: { "@type": "Person", name: "Ilyas Shaikh" },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+91-9136283995",
+          contactType: "Customer Service",
+        },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: " NASHEMAN CHS LTD, SHOP NO 8,BLDG NO 17, AMRUT NAGAR,NEAR AJIT GLASS FACTORY, JOGESHWARI (WEST) MUMBAI 400 102",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400102",
+          addressCountry: "IN",
+        },
+      }),
+    }}
+  />
+</Head>
         <div className="min-h-screen pt-24">
             {/* Services Hero Section */}
             <section className="bg-gradient-to-br from-navy to-navy-800 text-white pt-0 pb-20 -mt-24">
@@ -462,5 +521,6 @@ export default function Services() {
                 </div>
             </section>
         </div>
+        </>
     );
 }
