@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Air Technic Services - Best HVAC Solutions in Mumbai',
   description: 'Professional HVAC services in Mumbai & Navi Mumbai. 20+ licensed technicians, 1000+ projects. Modern workshop, service center & office under one roof since 2014.',
   keywords: 'HVAC Mumbai, Air Conditioning Services, VRF Systems, Chiller Installation, HVAC Maintenance Mumbai',
+  icons: {
+    icon: '/favicon.ico',               // Browser tab icon
+    shortcut: '/favicon.png',           // Modern browsers
+    apple: '/apple-touch-icon.png',     // iOS homescreen
+  },
 };
 
 export default function RootLayout({
