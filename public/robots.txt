@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://airtechnicservices.com
+
+# Sitemaps
+Sitemap: https://airtechnicservices.com/sitemap.xml

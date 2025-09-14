@@ -8,6 +8,7 @@ import PallidiumCarousel from './projects/PCarousel';
 import IITPowaiCarousel from './projects/IITPowaiCarousel';
 import NadiadwalaCarousel from './projects/nadiadwala';
 import { BadgeCheck, Globe, Building2, Layers3 } from 'lucide-react';
+import Head from "next/head";
 
 const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -36,6 +37,65 @@ const CountUp = ({ end, duration = 2000 }: { end: number; duration?: number }) =
 
 export default function Home() {
   return (
+    <>  
+   <Head>
+  <title>Pan-India HVAC Services by Certified Professionals | Air Technic Services</title>
+  <meta name="description" content="Delivering high-performance HVAC systems across India with expert installation, maintenance, and repair services by certified HVAC technicians." />
+  <meta name="keywords" content="HVAC, VRF, Chilled Water Pipelining, Chiller Installation, Ducting Systems, Ventilation Solutions, AHU Installation, Electrical Panel Revamping, Air Technic Services" />
+  <meta name="author" content="Air Technic Services" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Pan-India HVAC Services by Certified Professionals" />
+  <meta property="og:description" content="Delivering expert HVAC services including VRF, ducting, chiller, and AHU installations across India by certified professionals." />
+  <meta property="og:image" content="/ats-logo.png" />
+  <meta property="og:url" content="https://airtechnicservices.com" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Air Technic Services" />
+  <meta name="twitter:description" content="Expert HVAC solutions — installation, maintenance, repair across India." />
+  <meta name="twitter:image" content="/ats-logo.png" />
+
+  <link rel="canonical" href="https://airtechnicservices.com/" />
+  <link rel="icon" href="/ats-logo.png" />
+
+  {/* JSON-LD Schema for HVAC Business */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Air Technic Services",
+        url: "https://airtechnicservices.com",
+        logo: "https://airtechnicservices.com/ats-logo.png",
+        sameAs: [
+          "https://www.instagram.com/airtechnicservices/",
+          "https://www.linkedin.com/company/airtechnicservices/"
+        ],
+        description: "Air Technic Services delivers expert HVAC installations, VRF systems, and industrial ducting solutions across India.",
+        foundingDate: "2020",
+        founder: { "@type": "Person", name: "Ilyas Shaikh" },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+91-9136283995",
+          contactType: "Customer Service",
+        },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: " NASHEMAN CHS LTD, SHOP NO 8,BLDG NO 17, AMRUT NAGAR,NEAR AJIT GLASS FACTORY, JOGESHWARI (WEST) MUMBAI 400 102",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400102",
+          addressCountry: "IN",
+        },
+      }),
+    }}
+  />
+</Head>
+
+
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 flex items-center justify-center overflow-hidden">
@@ -418,5 +478,6 @@ export default function Home() {
 </section>
         
       </div>
+      </>
     );
   }
