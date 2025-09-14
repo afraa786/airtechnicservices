@@ -58,7 +58,10 @@ export default function Home() {
   <meta name="twitter:image" content="/ats-logo.png" />
 
   <link rel="canonical" href="https://airtechnicservices.com/" />
-  <link rel="icon" href="/ats-logo.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/ats-logo.png" />
+  <link rel="apple-touch-icon" href="/ats-logo.png" />
+
 
   {/* JSON-LD Schema for HVAC Business */}
   <script
